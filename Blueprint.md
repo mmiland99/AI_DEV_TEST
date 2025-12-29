@@ -44,11 +44,12 @@ For production scale, I would use an object-storage + event-driven pipeline:
 ### Diagram (high-level)
 ```mermaid
 flowchart LR
-  A[Object Storage: raw files] -->|event| B[Ingestion Trigger]
+  A[Object Storage raw files] -->|event| B[Ingestion trigger]
   B --> C[Queue]
-  C --> D[Parser/Normalizer Workers]
-  D --> E[(Raw Archive)]
-  D --> F[(Normalized Store)]
-  F --> G[Analysis Engine (Flags + QBR Outputs)]
-  H[(Roster: Colleagues)] --> D
+  C --> D[Parser and normalizer workers]
+  D --> E[(Raw archive)]
+  D --> F[(Normalized store)]
+  F --> G[Analysis engine]
+  G --> H[QBR outputs and flags]
+  I[(Roster Colleagues)] --> D
 
