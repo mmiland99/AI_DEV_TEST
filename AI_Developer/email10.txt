@@ -1,0 +1,51 @@
+Subject: User Profile Page - Data Modification Flow
+Date: 2025.07.02 16:20
+From: Eszter Varga (eszter.varga@kisjozsitech.hu)
+To: Bence Tóth (bence.toth@kisjozsitech.hu), Anna Horváth (anna.horvath@kisjozsitech.hu)
+Cc: Gábor Nagy (gabor.nagy@kisjozsitech.hu)
+
+Hi everyone,
+On the profile page, should we send a confirmation email to the user after a password change? The specification doesn't mention it, but it would be useful from a security perspective.
+Thanks,
+Eszter
+
+Subject: Re: User Profile Page - Data Modification Flow
+Date: 2025.07.03 09:12
+From: Anna Horváth (anna.horvath@kisjozsitech.hu)
+To: Eszter Varga (eszter.varga@kisjozsitech.hu), Bence Tóth (bence.toth@kisjozsitech.hu)
+Cc: Gábor Nagy (gabor.nagy@kisjozsitech.hu)
+
+Hi Eszter,
+I think it's a good idea, we should definitely send an email. It's not a big technical effort to implement.
+Regards,
+Anna
+
+Subject: Re: User Profile Page - Data Modification Flow
+Date: 2025.07.03 10:30
+From: Bence Tóth (bence.toth@kisjozsitech.hu)
+To: Anna Horváth (anna.horvath@kisjozsitech.hu), Eszter Varga (eszter.varga@kisjozsitech.hu)
+Cc: Gábor Nagy (gabor.nagy@kisjozsitech.hu)
+
+Okay, I support it.
+Also: Eszter, have we received the homepage banner images from the client yet? The test environment still has placeholder images, and it would be good to see it with the real content.
+Thanks,
+Bence
+
+Subject: Re: User Profile Page - Data Modification Flow
+Date: 2025.07.03 10:45
+From: Gábor Nagy (gabor.nagy@kisjozsitech.hu)
+To: Bence Tóth (bence.toth@kisjozsitech.hu), Anna Horváth (anna.horvath@kisjozsitech.hu), Eszter Varga (eszter.varga@kisjozsitech.hu)
+
+Hi everyone,
+Bence, please don't ask questions about the banners in this thread, as the information will get lost. Zoltán is handling the creative assets, please start a separate conversation with him about this.
+Let's add the email after password modification to the to-do list.
+Thanks,
+Gábor
+
+Subject: Re: User Profile Page - Data Modification Flow
+Date: 2025.07.03 10:50
+From: Bence Tóth (bence.toth@kisjozsitech.hu)
+To: Gábor Nagy (gabor.nagy@kisjozsitech.hu), Anna Horváth (anna.horvath@kisjozsitech.hu), Eszter Varga (eszter.varga@kisjozsitech.hu)
+
+Apologies, you're right. I'll write to Zoltán.
+Bence

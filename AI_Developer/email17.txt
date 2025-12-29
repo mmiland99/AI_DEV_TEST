@@ -1,0 +1,50 @@
+From: Zsófia Varga (zsofia.varga@kisjozsitech.hu)
+To: Anna Nagy, Gábor Kiss
+Date: 2025.06.25 11:20
+Subject: Fwd: Re: DivatKirály - User registration process
+Hi everyone,
+The password strength check for registration is done. It now only allows proceeding if it contains lowercase, uppercase letters, and a number. The ticket is closed.
+Zsófi
+
+From: Anna Nagy (anna.nagy@kisjozsitech.hu)
+To: Zsófia Varga, Gábor Kiss
+Date: 2025.06.25 11:25
+Subject: Re: Fwd: Re: DivatKirály - User registration process
+Great, thanks Zsófi!
+
+From: Eszter Horváth (eszter.horvath@kisjozsitech.hu)
+To: Anna Nagy, Péter Kovács, Zsófia Varga, Gábor Kiss
+Date: 2025.06.26 15:03
+Subject: Fwd: Re: DivatKirály - User registration process
+Hi everyone,
+Sorry to write here, but this is urgent. The client indicated that due to GDPR, the newsletter subscription checkbox cannot be checked by default. It currently is. Please fix it.
+Thanks,
+Eszter
+
+Forwarded Message:
+From: DivatKirály Kft. ugyfel@divatkiralynagyker.hu
+Date: 2025.06.26 14:55
+Subject: Newsletter Subscription
+Dear Eszter,
+We noticed that the newsletter subscription is automatically checked during registration. According to GDPR, this must be unchecked by default. Please modify it urgently.
+Sincerely,
+DivatKirály Kft.
+
+From: Zsófia Varga (zsofia.varga@kisjozsitech.hu)
+To: Eszter Horváth, Anna Nagy, Péter Kovács, Gábor Kiss
+Date: 2025.06.27 09:12
+Subject: Re: Fwd: Re: DivatKirály - User registration process
+Hi everyone,
+Okay, then I'll uncheck the Terms and Conditions acceptance checkbox too, so that's not checked by default either.
+Regards,
+Zsófi
+
+From: Anna Nagy (anna.nagy@kisjozsitech.hu)
+To: Zsófia Varga, Eszter Horváth, Péter Kovács, Gábor Kiss
+Date: 2025.06.27 09:18
+Subject: Re: Fwd: Re: DivatKirály - User registration process
+Hi Zsófi,
+STOP! Thanks for responding quickly, but the client only mentioned the newsletter subscription. The acceptance of the Terms and Conditions can remain (in fact, it must) with the current logic. Please only modify the newsletter checkbox!
+It's very important that we do exactly what is requested.
+Thanks,
+Anna

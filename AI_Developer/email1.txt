@@ -1,0 +1,53 @@
+From: Zsuzsa Varga varga.zsuzsa@kisjozsitech.hu
+To: István Nagy nagy.istvan@kisjozsitech.hu, Anna Kiss kiss.anna@kisjozsitech.hu, Gábor Horváth horvath.gabor@kisjozsitech.hu
+Cc: Péter Kovács kovacs.peter@kisjozsitech.hu
+Date: Mon, 02 Jun 2025 10:00:00 +0200
+Subject: Project Phoenix - New Login Page Specification
+
+Hi team,
+Attached is the seemingly final specification for the login page. Please review it and let me know if anything is unclear or technically difficult to implement.
+Thanks,
+Zsuzsa
+
+From: Gábor Horváth horvath.gabor@kisjozsitech.hu
+To: Zsuzsa Varga varga.zsuzsa@kisjozsitech.hu, István Nagy nagy.istvan@kisjozsitech.hu, Anna Kiss kiss.anna@kisjozsitech.hu
+Cc: Péter Kovács kovacs.peter@kisjozsitech.hu
+Date: Mon, 02 Jun 2025 10:15:00 +0200
+Subject: Project Phoenix - New Login Page Specification
+
+Hi Zsuzsa,
+Thanks, I've reviewed it. In point 3.2, the password strength criteria (min. 1 uppercase letter, 1 number) are fine, but I don't see any mention of the minimum password length. Should it be 8 characters, like in other modules?
+Best,
+Gábor
+
+From: István Nagy <nagy.istván@kisjozsitech.hu>
+To: Zsuzsa Varga varga.zsuzsa@kisjozsitech.hu, Gábor Horváth horvath.gabor@kisjozsitech.hu, Anna Kiss kiss.anna@kisjozsitech.hu
+Cc: Péter Kovács kovacs.peter@kisjozsitech.hu
+Date: Mon, 02 Jun 2025 10:30:00 +0200
+Subject: Project Phoenix - New Login Page Specification
+
+Hi Zsuzsa,
+The specification mentions "Google SSO" as an option. Has this been confirmed with the client? Implementing this will require extra effort, as our current user management system doesn't support it natively; we'd need to pull in and configure a separate library. This wasn't included in the estimate.
+Pisti
+
+From: Péter Kovács kovacs.peter@kisjozsitech.hu
+To: István Nagy nagy.istvan@kisjozsitech.hu, Zsuzsa Varga varga.zsuzsa@kisjozsitech.hu, Gábor Horváth horvath.gabor@kisjozsitech.hu, Anna Kiss kiss.anna@kisjozsitech.hu
+Date: Mon, 02 Jun 2025 10:45:00 +0200
+Subject: Project Phoenix - New Login Page Specification
+
+Hi Pisti, Zsuzsa,
+That's a valid point. Zsuzsa, please coordinate with Eszter to find out how firm this requirement is from the client. If it's absolutely necessary, we'll need to re-plan the sprint.
+Thanks,
+Péter
+
+From: Zsuzsa Varga varga.zsuzsa@kisjozsitech.hu
+To: Péter Kovács kovacs.peter@kisjozsitech.hu, István Nagy nagy.istvan@kisjozsitech.hu, Gábor Horváth horvath.gabor@kisjozsitech.hu, Anna Kiss kiss.anna@kisjozsitech.hu
+Date: Mon, 09 Jun 2025 09:30:00 +0200
+Subject: Project Phoenix - New Login Page Specification
+
+Hi all,
+I've spoken with Eszter. The SSO was a "nice to have" requirement, but they're not insistent on it if it causes delays. We can remove it from the scope for now. Are the other points okay?
+Best,
+Zsuzsa
+
+

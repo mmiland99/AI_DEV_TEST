@@ -1,0 +1,9 @@
+From: Anna Nagy (anna.nagy@kisjozsitech.hu)
+To: Bence Szabó, Zsófia Varga
+Date: 2025.06.16 16:45
+Subject: Small request: "New" label on the product page
+Hi everyone,
+A "nice to have" requirement came up: products uploaded in the last 30 days should have a small "NEW" badge on their image on both the listing page and the product detail page.
+How big of a task would this be? Could we fit it into the current sprint if it's not a huge effort?
+Thanks,
+Anna

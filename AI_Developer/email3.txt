@@ -1,0 +1,28 @@
+From: Anna Kiss kiss.anna@kisjozsitech.hu
+To: István Nagy nagy.istvan@kisjozsitech.hu, Gábor Horváth horvath.gabor@kisjozsitech.hu, Péter Kovács kovacs.peter@kisjozsitech.hu, Zsuzsa Varga varga.zsuzsa@kisjozsitech.hu
+Date: Mon, 30 Jun 2025 10:00:00 +0200
+Subject: RE: Project Phoenix - New Login Page Specification
+
+Hi team,
+Sorry to ask here, but I can't find the other email. Gábor is looking into the profile picture bug, right? Just because Péter asked today about the status of JIRA-112, and this is it.
+Thanks,
+Anna
+
+From: Péter Kovács kovacs.peter@kisjozsitech.hu
+To: Anna Kiss kiss.anna@kisjozsitech.hu, István Nagy nagy.istvan@kisjozsitech.hu, Gábor Horváth horvath.gabor@kisjozsitech.hu, Zsuzsa Varga varga.zsuzsa@kisjozsitech.hu
+Date: Mon, 30 Jun 2025 10:05:00 +0200
+Subject: RE: Project Phoenix - New Login Page Specification
+
+Hi Anna,
+Yes, Gábor is looking into it, but next time please ask in the relevant ticket or its own thread, because Zsuzsa surely won't understand what's going on now. :)
+Thanks,
+Péter
+
+From: Zsuzsa Varga varga.zsuzsa@kisjozsitech.hu
+To: Péter Kovács kovacs.peter@kisjozsitech.hu, Anna Kiss kiss.anna@kisjozsitech.hu, István Nagy nagy.istvan@kisjozsitech.hu, Gábor Horváth horvath.gabor@kisjozsitech.hu
+Date: Mon, 30 Jun 2025 10:10:00 +0200
+Subject: RE: Project Phoenix - New Login Page Specification
+
+Indeed, I didn't understand :) But no worries!
+Best,
+Zsuzsa

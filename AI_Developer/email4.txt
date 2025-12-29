@@ -1,0 +1,46 @@
+From: Anna Kiss kiss.anna@kisjozsitech.hu
+To: István Nagy nagy.istvan@kisjozsitech.hu, Gábor Horváth horvath.gabor@kisjozsitech.hu
+Cc: Péter Kovács kovacs.peter@kisjozsitech.hu
+Date: Mon, 09 Jun 2025 14:00:00 +0200
+Subject: Project Phoenix - Staging Environment Anomaly
+
+Hi team,
+I'm experiencing something strange on staging. If I upload a new user profile picture, it shows the old image after saving, but after a hard refresh (Ctrl+F5), it shows the new one. Could this be a cache issue? It's quite disruptive for testing.
+Thanks,
+Anna
+
+From: Gábor Horváth horvath.gabor@kisjozsitech.hu
+To: Anna Kiss kiss.anna@kisjozsitech.hu, István Nagy nagy.istvan@kisjozsitech.hu
+Cc: Péter Kovács kovacs.peter@kisjozsitech.hu
+Date: Mon, 09 Jun 2025 14:15:00 +0200
+Subject: Project Phoenix - Staging Environment Anomaly
+
+Hi Anna,
+I checked, and the error doesn't appear for me. Are you using Chrome? Have you tried in incognito mode?
+Best,
+Gábor
+
+From: Anna Kiss kiss.anna@kisjozsitech.hu
+To: Gábor Horváth horvath.gabor@kisjozsitech.hu, István Nagy nagy.istvan@kisjozsitech.hu
+Cc: Péter Kovács kovacs.peter@kisjozsitech.hu
+Date: Mon, 09 Jun 2025 14:30:00 +0200
+Subject: Project Phoenix - Staging Environment Anomaly
+
+Yes, it happens in both Chrome and Firefox, in regular and incognito modes. Maybe it got fixed after yesterday's deployment? It's not happening for me now either. Let's leave it for now; I'll let you know if it reappears.
+Anna
+
+From: István Nagy nagy.istvan@kisjozsitech.hu
+To: Anna Kiss kiss.anna@kisjozsitech.hu, Gábor Horváth horvath.gabor@kisjozsitech.hu, Péter Kovács kovacs.peter@kisjozsitech.hu
+Date: Sun, 29 Jun 2025 10:00:00 +0200
+Subject: Project Phoenix - Staging Environment Anomaly
+
+Guys, I've run into Anna's bug. The profile picture upload is indeed acting up. I figured out that it only happens if the image name contains spaces. The system renames it, but the frontend somehow requests the old, space-containing name from the API, which returns a 404. This isn't a cache issue; it's a bug in the image upload logic. Gábor, didn't your last commit touch this part?
+Pisti
+
+From: Gábor Horváth horvath.gabor@kisjozsitech.hu
+To: István Nagy nagy.istvan@kisjozsitech.hu, Anna Kiss kiss.anna@kisjozsitech.hu, Péter Kovács kovacs.peter@kisjozsitech.hu
+Date: Mon, 30 Jun 2025 09:45:00 +0200
+Subject: Project Phoenix - Staging Environment Anomaly
+
+Yes, it did. I rewrote the filename validation to replace special characters. It's possible the frontend isn't receiving the modified filename. My apologies, I'll check it immediately. This is clearly my mistake, sorry for the confusion during development.
+Gábor

@@ -1,0 +1,45 @@
+From: Eszter Horváth (eszter.horvath@kisjozsitech.hu)
+To: Anna Nagy, Péter Kovács
+Date: 2025.05.26 10:15
+Subject: Re: DivatKirály webshop - Homepage design feedback
+Hi everyone,
+I'm sending over the client's (DivatKirály Kft.) feedback on the V2 homepage design. They like most things, but have a few small requests. Please see the attachment.
+Please review.
+Thanks,
+Eszter
+
+From: Anna Nagy (anna.nagy@kisjozsitech.hu)
+To: Eszter Horváth, Péter Kovács, Bence Szabó
+Date: 2025.05.26 14:30
+Subject: Re: DivatKirály webshop - Homepage design feedback
+Hi Eszter,
+Thanks, I've reviewed it. Most are straightforward modifications, Bence can do them quickly.
+I have one question regarding point 3 ("The 'Add to Cart' button should be more prominent"). Does the client want a different color instead of the current green, or just for it to be larger/bold? This isn't clear.
+Thanks,
+Anna
+
+From: Péter Kovács (peter.kovacs@kisjozsitech.hu)
+To: Anna Nagy, Eszter Horváth, Bence Szabó
+Date: 2025.05.27 09:05
+Subject: Re: DivatKirály webshop - Homepage design feedback
+Hi everyone,
+Thanks Anna. Eszter, please ask about the button color.
+What's more urgent though: they also complained about the logo size. Bence, could you enlarge it by 15% in the header and check if it breaks the mobile view? Let's show them this first.
+Péter
+
+From: Bence Szabó (bence.szabó@kisjozsitech.hu)
+To: Péter Kovács, Anna Nagy, Eszter Horváth
+Date: 2025.05.27 11:50
+Subject: Re: DivatKirály webshop - Homepage design feedback
+Hi Péter,
+I've enlarged the logo. Nothing is broken, I've sent the link from the test environment.
+Regards,
+Bence
+
+From: Eszter Horváth (eszter.horvath@kisjozsitech.hu)
+To: Péter Kovács, Anna Nagy, Bence Szabó
+Date: 2025.05.28 16:20
+Subject: Re: DivatKirály webshop - Homepage design feedback
+Hi everyone,
+Great, the logo will be perfect for them this way, I've shown it to them. It can go live.
+Eszter

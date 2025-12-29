@@ -1,0 +1,54 @@
+From: Bence Szabó (bence.szabó@kisjozsitech.hu)
+To: Péter Kovács, Gábor Kiss, Anna Nagy, Eszter Horváth, Zsófia Varga
+Date: 2025.06.29 10:30
+Subject: Re: DivatKirály - Weekly status and development progress
+Great, thanks for the status, Péter!
+Since we're doing so well with the DivatKirály project, how about a team lunch this week? Say, Friday? We could order some pizza, company expense. :)
+What do you think?
+Regards,
+Bence
+
+From: Zsófia Varga (zsofia.varga@kisjozsitech.hu)
+To: Bence Szabó, Péter Kovács, Gábor Kiss, Anna Nagy, Eszter Horváth
+Date: 2025.06.29 10:38
+Subject: Re: DivatKirály - Weekly status and development progress
+Hi Bence,
+Great idea, I'm in! Though instead of pizza, I'd rather vote for Mexican, a new place opened around the corner. But pizza is fine too if the majority wants that. :D
+Friday works for me too!
+Zsófi
+
+From: Gábor Kiss (gabor.kiss@kisjozsitech.hu)
+To: Zsófia Varga, Bence Szabó, Péter Kovács, Anna Nagy, Eszter Horváth
+Date: 2025.06.29 11:15
+Subject: Re: DivatKirály - Weekly status and development progress
+Hi everyone,
+The "doing well" part is mostly true for your end so far, I still have to wrestle with the payment gateway this week. :)
+But Friday lunch is okay, just don't overdo it. Pizza is more practical.
+Gábor
+
+From: Anna Nagy (anna.nagy@kisjozsitech.hu)
+To: Gábor Kiss, Zsófia Varga, Bence Szabó, Péter Kovács, Eszter Horváth
+Date: 2025.06.30 09:40
+Subject: Re: DivatKirály - Weekly status and development progress
+Hi everyone,
+I've sent the V3 mockup to Zeplin, please work from there, not from the V2 on the drive. I've also updated the button colors according to the final branding.
+Thanks,
+Anna
+
+From: Péter Kovács (peter.kovacs@kisjozsitech.hu)
+To: Anna Nagy, Gábor Kiss, Zsófia Varga, Bence Szabó, Eszter Horváth
+Date: 2025.06.30 09:45
+Subject: Re: DivatKirály - Weekly status and development progress
+Hi Anna,
+I don't think this was meant for here. :)
+To the others: let's discuss the lunch topic during the morning standup, let's not burden the project correspondence with it. Until then, everyone think about whether it's pizza or Mexican.
+Thanks,
+Péter
+
+From: Anna Nagy (anna.nagy@kisjozsitech.hu)
+To: Péter Kovács, Gábor Kiss, Zsófia Varga, Bence Szabó, Eszter Horváth
+Date: 2025.06.30 09:48
+Subject: Re: DivatKirály - Weekly status and development progress
+Oh, sorry, indeed! I wanted to write this in the "Solar Panel Tender project" correspondence. My apologies for the confusion!
+I vote for Mexican. :)
+Anna

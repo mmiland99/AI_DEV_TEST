@@ -1,0 +1,40 @@
+Subject: Payment gateway API integration - error messages
+Date: 2025.06.19 15:10
+From: Bence Tóth (bence.toth@kisjozsitech.hu)
+To: Péter Kovács (peter.kovacs@kisjozsitech.hu)
+Cc: Eszter Varga (eszter.varga@kisjozsitech.hu)
+
+Hi Péter,
+I'm stuck on the payment gateway integration. I'm handling successful payments well, but what should I do if the gateway TIMEOUT or INVALID_CARD errors? I couldn't find this in the specification. Should I simply redirect the user back to the cart with a generic error message?
+Thanks,
+Bence
+
+Subject: Re: Payment gateway API integration - error messages
+Date: 2025.06.19 15:25
+From: Eszter Varga (eszter.varga@kisjozsitech.hu)
+To: Bence Tóth (bence.toth@kisjozsitech.hu), Péter Kovács (peter.kovacs@kisjozsitech.hu)
+
+Hi everyone,
+Good question, Bence.
+For INVALID_CARD: redirect to the payment page with a clear message: "Incorrect card details, please check!".
+For TIMEOUT: also back to the payment page, but the message should be "Payment failed due to timeout, please try again."
+By the way, have we discussed the API rate-limiting issue yet? What happens if we send too many requests in a short time? Do we need to handle this?
+Regards,
+Eszter
+
+Subject: Re: Payment gateway API integration - error messages
+Date: 2025.06.19 16:00
+From: Péter Kovács (peter.kovacs@kisjozsitech.hu)
+To: Eszter Varga (eszter.varga@kisjozsitech.hu), Bence Tóth (bence.toth@kisjozsitech.hu)
+
+Hi Eszter,
+Alright, the error messages make sense this way. Bence, please implement it based on these, then.
+Péter
+
+Subject: Re: Payment gateway API integration - error messages
+Date: 2025.06.20 09:41
+From: Bence Tóth (bence.toth@kisjozsitech.hu)
+To: Péter Kovács (peter.kovacs@kisjozsitech.hu), Eszter Varga (eszter.varga@kisjozsitech.hu)
+
+Okay, thanks for the quick help! I'll get it done today.
+Bence

@@ -1,0 +1,54 @@
+Subject: Project Status - Weekly Summary
+Date: 2025.06.09 10:15
+From: Gábor Nagy (gabor.nagy@kisjozsitech.hu)
+To: Eszter Varga (eszter.varga@kisjozsitech.hu), Péter Kovács (peter.kovacs@kisjozsitech.hu), Bence Tóth (bence.toth@kisjozsitech.hu), Anna Horváth (anna.horvath@kisjozsitech.hu), Zoltán Kiss (zoltan.kiss@kisjozsitech.hu)
+
+Hi everyone,
+A quick summary of the past week and upcoming tasks:
+The login and registration module is complete and awaiting BA testing. Eszter, please take a look this week.
+Product list page development is in progress; Bence and Anna are working on this. Expected completion: end of next week.
+Zoltán, was there any feedback from the client regarding the homepage design presented last week?
+Have a good week,
+Gábor
+
+Subject: Re: Project Status - Weekly Summary
+Date: 2025.06.09 11:02
+From: Eszter Varga (eszter.varga@kisjozsitech.hu)
+To: Gábor Nagy (gabor.nagy@kisjozsitech.hu), Péter Kovács (peter.kovacs@kisjozsitech.hu), Bence Tóth (bence.toth@kisjozsitech.hu), Anna Horváth (anna.horvath@kisjozsitech.hu), Zoltán Kiss (zoltan.kiss@kisjozsitech.hu)
+
+Hi Gábor,
+Understood, I will test the login/reg module this week.
+I have a question regarding the product list page: how should we handle the "in stock" option in the filtering criteria if a product has multiple variants, and only one of them is in stock? Should the main product appear in the results?
+Thanks,
+Eszter
+
+Subject: Re: Project Status - Weekly Summary
+Date: 2025.06.09 11:30
+From: Péter Kovács (peter.kovacs@kisjozsitech.hu)
+To: Eszter Varga (eszter.varga@kisjozsitech.hu), Gábor Nagy (gabor.nagy@kisjozsitech.hu), Bence Tóth (bence.toth@kisjozsitech.hu), Anna Horváth (anna.horvath@kisjozsitech.hu), Zoltán Kiss (zoltan.kiss@kisjozsitech.hu)
+
+Hi Eszter,
+I think yes, the product should appear, and we indicate on the detailed product page which variant is available. This is the simplest logic.
+Regards,
+Péter
+
+Subject: Re: Project Status - Weekly Summary
+Date: 2025.06.23 14:20
+From: Zoltán Kiss (zoltan.kiss@kisjozsitech.hu)
+To: Gábor Nagy (gabor.nagy@kisjozsitech.hu), Eszter Varga (eszter.varga@kisjozsitech.hu), Péter Kovács (peter.kovacs@kisjozsitech.hu), Bence Tóth (bence.toth@kisjozsitech.hu), Anna Horváth (anna.horvath@kisjozsitech.hu)
+
+Hi everyone,
+Sorry for the late reply, I only just got to this email. Yes, Gábor, the client liked the design but requested a small modification in the header. I've sent the details to Eszter in a separate email.
+Regards,
+Zoli
+
+Subject: Re: Project Status - Weekly Summary
+Date: 2025.06.23 14:35
+From: Gábor Nagy (gabor.nagy@kisjozsitech.hu)
+To: Zoltán Kiss (zoltan.kiss@kisjozsitech.hu), Eszter Varga (eszter.varga@kisjozsitech.hu), Péter Kovács (peter.kovacs@kisjozsitech.hu), Bence Tóth (bence.toth@kisjozsitech.hu), Anna Horváth (anna.horvath@kisjozsitech.hu)
+
+Hi Zoli,
+Thanks for the info! Eszter, let's add this to the backlog then.
+I'll hold a quick status meeting tomorrow morning, I'll send an invite shortly.
+Regards,
+Gábor

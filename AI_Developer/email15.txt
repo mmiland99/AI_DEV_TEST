@@ -1,0 +1,50 @@
+From: Péter Kovács (peter.kovacs@kisjozsitech.hu)
+To: Gábor Kiss, Anna Nagy
+Date: 2025.06.09 11:00
+Subject: DivatKirály - Payment Gateway API Integration
+Hi everyone,
+The final API keys from Barion for the DivatKirály project have arrived. Gábor, please start the integration based on the specification. Anna, you can assist him if any questions arise during the process.
+Thanks,
+Péter
+
+From: Gábor Kiss (gabor.kiss@kisjozsitech.hu)
+To: Péter Kovács, Anna Nagy
+Date: 2025.06.10 15:10
+Subject: DivatKirály - Payment Gateway API Integration
+Hi everyone,
+I've started, but their documentation on callback URL handling isn't entirely clear. Their V2 API states they return transactionId in POST, but the test endpoint gives it back to me as a query parameter in a GET request. Anna, how did we document this in the spec?
+Thanks,
+Gábor
+
+From: Péter Kovács (peter.kovacs@kisjozsitech.hu)
+To: Gábor Kiss, Anna Nagy
+Date: 2025.06.24 09:30
+Subject: DivatKirály - Payment Gateway API Integration
+Hi Gábor,
+What's the status on the Barion integration? Any progress? We need to start testing soon.
+Regards,
+Péter
+
+From: Gábor Kiss (gabor.kiss@kisjozsitech.hu)
+To: Péter Kovács, Anna Nagy
+Date: 2025.06.24 09:35
+Subject: DivatKirály - Payment Gateway API Integration
+Hi Péter,
+Sorry, urgent server maintenance took up my time last week, this task got a bit sidelined. My question about the callback is still open, I can't proceed without it.
+Gábor
+
+From: Anna Nagy (anna.nagy@kisjozsitech.hu)
+To: Gábor Kiss, Péter Kovács
+Date: 2025.06.24 10:02
+Subject: DivatKirály - Payment Gateway API Integration
+Hi Gábor,
+Apologies, this somehow slipped my attention. In the spec, we recorded the POST method because the client provided this info based on a previous project. But if the test endpoint shows something different, then the documentation is probably the authoritative source. Please handle the GET request. I'll update the specification.
+Thanks for your patience!
+Anna
+
+From: Gábor Kiss (gabor.kiss@kisjozsitech.hu)
+To: Anna Nagy, Péter Kovács
+Date: 2025.06.27 14:00
+Subject: DivatKirály - Payment Gateway API Integration
+Ok, great, that's clear now. I'll continue.
+Gábor

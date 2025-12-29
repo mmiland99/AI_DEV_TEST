@@ -1,0 +1,27 @@
+Subject: Fwd: Request regarding report export
+Date: 2025.06.25 11:22
+From: Zoltán Kiss (zoltan.kiss@kisjozsitech.hu)
+To: Gábor Nagy (gabor.nagy@kisjozsitech.hu), Eszter Varga (eszter.varga@kisjozsitech.hu)
+
+Hi everyone,
+Forwarding the client's request. They would like to be able to download monthly reports not only in PDF but also in CSV format. Can we implement this in the next sprint?
+Thanks,
+Zoli
+--- Forwarded Message ---
+From: Béla Ügyfél (bela.ugyfel@nagyker.hu)
+Subject: Request regarding report export
+Date: 2025.06.25 11:15
+Dear Zoltán,
+The reporting interface is great, but we would also need the raw data. Would it be possible to export in CSV format as well?
+Thank you,
+Béla
+
+Subject: Re: Fwd: Request regarding report export
+Date: 2025.06.25 14:05
+From: Eszter Varga (eszter.varga@kisjozsitech.hu)
+To: Zoltán Kiss (zoltan.kiss@kisjozsitech.hu), Gábor Nagy (gabor.nagy@kisjozsitech.hu)
+
+Hi Zoli,
+Thanks for forwarding this. It's technically feasible, but we need to assess the development effort. Gábor, what do you think, does it fit into the current schedule?
+Regards,
+Eszter

@@ -1,0 +1,46 @@
+Subject: URGENT: Client cannot log in!
+Date: 2025.06.30 09:01
+From: Zoltán Kiss (zoltan.kiss@kisjozsitech.hu)
+To: Gábor Nagy (gabor.nagy@kisjozsitech.hu)
+
+Hi Gábor,
+The client just called, no one in the company has been able to log into the system since yesterday's update. Please look into it immediately, there's a lot of panic!
+Thanks,
+Zoli
+
+Subject: Re: URGENT: Client cannot log in!
+Date: 2025.06.30 09:03
+From: Gábor Nagy (gabor.nagy@kisjozsitech.hu)
+To: Péter Kovács (peter.kovacs@kisjozsitech.hu), Bence Tóth (bence.toth@kisjozsitech.hu), Anna Horváth (anna.horvath@kisjozsitech.hu)
+Cc: Zoltán Kiss (zoltan.kiss@kisjozsitech.hu), Eszter Varga (eszter.varga@kisjozsitech.hu)
+
+Developers,
+All hands on deck! Login is not working live since yesterday's deployment. Péter, please investigate immediately!
+Gábor
+
+Subject: Re: URGENT: Client cannot log in!
+Date: 2025.06.30 09:15
+From: Péter Kovács (peter.kovacs@kisjozsitech.hu)
+To: Gábor Nagy (gabor.nagy@kisjozsitech.hu), Bence Tóth (bence.toth@kisjozsitech.hu), Anna Horváth (anna.horvath@kisjozsitech.hu)
+Cc: Zoltán Kiss (zoltan.kiss@kisjozsitech.hu), Eszter Varga (eszter.varga@kisjozsitech.hu)
+
+Found it. The wrong environment variable was set on the production server in yesterday's deploy script. My mistake, apologies. I'm fixing it.
+Péter
+
+Subject: Re: URGENT: Client cannot log in!
+Date: 2025.06.30 09:18
+From: Anna Horváth (anna.horvath@kisjozsitech.hu)
+To: Péter Kovács (peter.kovacs@kisjozsitech.hu), Gábor Nagy (gabor.nagy@kisjozsitech.hu), Bence Tóth (bence.toth@kisjozsitech.hu)
+Cc: Zoltán Kiss (zoltan.kiss@kisjozsitech.hu), Eszter Varga (eszter.varga@kisjozsitech.hu)
+
+I have also checked the logs, the db connection string was indeed faulty. I've already pushed the fix, it should be live shortly.
+Anna
+
+Subject: Re: URGENT: Client cannot log in!
+Date: 2025.06.30 09:25
+From: Péter Kovács (peter.kovacs@kisjozsitech.hu)
+To: Gábor Nagy (gabor.nagy@kisjozsitech.hu), Bence Tóth (bence.toth@kisjozsitech.hu), Anna Horváth (anna.horvath@kisjozsitech.hu)
+Cc: Zoltán Kiss (zoltan.kiss@kisjozsitech.hu), Eszter Varga (eszter.varga@kisjozsitech.hu)
+
+Thanks Anna! The fix is out, I've tested it, login is working again. Zoli, please inform the client. We apologize for the inconvenience.
+Péter

@@ -1,0 +1,52 @@
+From: Péter Kovács (peter.kovacs@kisjozsitech.hu)
+To: Eszter Horváth, Anna Nagy, Gábor Kiss, Bence Szabó, Zsófia Varga
+Date: 2025.06.28 10:00
+Subject: DivatKirály - Weekly status and development progress
+Hi everyone,
+Quick weekly status:
+Frontend: Homepage modifications are done, product page is at 80%. (Thanks Bence)
+Backend: Payment gateway integration is ongoing, testable version will be ready this week. (Thanks Gábor)
+Registration: Done, tested. (Thanks Zsófi)
+We're in good shape, let's keep up the pace. If there's any blocker, let me know.
+Have a good week,
+Péter
+
+From: Eszter Horváth (eszter.horvath@kisjozsitech.hu)
+To: Péter Kovács, Anna Nagy, Gábor Kiss, Bence Szabó, Zsófia Varga
+Date: 2025.06.28 11:30
+Subject: Re: DivatKirály - Weekly status and development progress
+Great, thanks for the update Péter!
+Oh, and in last week's meeting, the client mentioned it would be good if the search worked not only for product names but also for item numbers (SKU). I forgot to mention this until now, sorry. I don't know how big of a job this is.
+Regards,
+Eszter
+
+From: Anna Nagy (anna.nagy@kisjozsitech.hu)
+To: Eszter Horváth, Péter Kovács, Gábor Kiss, Bence Szabó, Zsófia Varga
+Date: 2025.06.29 09:25
+Subject: Re: DivatKirály - Weekly status and development progress
+Hi Eszter,
+Oops, that's important info. This is a new requirement, not in the current specification. Gábor, the backend search engine currently only searches in the 'product_name' field, right? The 'sku' field should also be included.
+Péter, we need a new ticket for this, and we need to estimate the effort.
+Regards,
+Anna
+
+From: Gábor Kiss (gabor.kiss@kisjozsitech.hu)
+To: Anna Nagy, Eszter Horváth, Péter Kovács, Bence Szabó, Zsófia Varga
+Date: 2025.06.29 10:10
+Subject: Re: DivatKirály - Weekly status and development progress
+Yes, the search currently only looks at the name and description. Searching by SKU is feasible, but the current logic needs to be extended. About half a day of work on the backend side, plus testing.
+Gábor
+
+From: Péter Kovács (peter.kovacs@kisjozsitech.hu)
+To: Gábor Kiss, Anna Nagy, Eszter Horváth, Bence Szabó, Zsófia Varga
+Date: 2025.06.30 09:00
+Subject: Re: DivatKirály - Weekly status and development progress
+Alright, thanks everyone. Anna, please create a ticket in JIRA with the title "Extend search by SKU". Eszter, let's inform the client that this is an extra development, but we'll do it. Gábor, can you make time for it next week?
+Péter
+
+From: Gábor Kiss (gabor.kiss@kisjozsitech.hu)
+To: Péter Kovács, Anna Nagy, Eszter Horváth, Bence Szabó, Zsófia Varga
+Date: 2025.06.30 09:15
+Subject: Re: DivatKirály - Weekly status and development progress
+Sure, I can schedule it for next week.
+Gábor

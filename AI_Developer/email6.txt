@@ -1,0 +1,58 @@
+From: Eszter Szabó szabo.eszter@kisjozsitech.hu
+To: Péter Kovács kovacs.peter@kisjozsitech.hu, Zsuzsa Varga varga.zsuzsa@kisjozsitech.hu
+Date: Mon, 09 Jun 2025 11:00:00 +0200
+Subject: URGENT: Client Feedback on Demo
+
+Hi all!
+I just spoke with the client after yesterday's demo. They were very pleased with the progress, but had a few observations.
+The images in the main slider are loading too slowly.
+The "Contact" button in the menu could be larger and more prominent, in their opinion.
+The company logo in the footer should also be clickable and lead to the homepage, just like the one in the header. They consider this important for brand consistency.
+The login button could be in the top right corner.
+Péter, can we still commit to these before the next demo?
+Thanks,
+Eszter
+
+From: Péter Kovács kovacs.peter@kisjozsitech.hu
+To: István Nagy nagy.istvan@kisjozsitech.hu, Anna Kiss kiss.anna@kisjozsitech.hu, Zsuzsa Varga varga.zsuzsa@kisjozsitech.hu
+Cc: Eszter Szabó szabo.eszter@kisjozsitech.hu
+Date: Mon, 09 Jun 2025 11:15:00 +0200
+Subject: URGENT: Client Feedback on Demo
+
+Hi team,
+Forwarding Eszter's email. We need to look into the following:
+Slider image optimization (Pisti, is this more backend or frontend?)
+"Contact" button design (Anna, can you check this?)
+Login button repositioning (Anna, this is also for you).
+Please estimate these.
+Thanks,
+Péter
+
+From: Anna Kiss kiss.anna@kisjozsitech.hu
+To: Péter Kovács kovacs.peter@kisjozsitech.hu, István Nagy nagy.istvan@kisjozsitech.hu, Zsuzsa Varga varga.zsuzsa@kisjozsitech.hu
+Cc: Eszter Szabó szabo.eszter@kisjozsitech.hu
+Date: Mon, 09 Jun 2025 11:30:00 +0200
+Subject: URGENT: Client Feedback on Demo
+
+Hi Péter,
+The buttons won't be an issue. I'll highlight the Contact button and move the login button. This will be about 2-3 hours of work in total.
+Best,
+Anna
+
+From: István Nagy nagy.istvan@kisjozsitech.hu
+To: Péter Kovács kovacs.peter@kisjozsitech.hu, Anna Kiss kiss.anna@kisjozsitech.hu, Zsuzsa Varga varga.zsuzsa@kisjozsitech.hu
+Cc: Eszter Szabó szabo.eszter@kisjozsitech.hu
+Date: Mon, 09 Jun 2025 11:45:00 +0200
+Subject: URGENT: Client Feedback on Demo
+
+I'll look into the slider images; it's probably an issue with compression. Give me half a day for it.
+Pisti
+
+From: Péter Kovács kovacs.peter@kisjozsitech.hu
+To: István Nagy nagy.istvan@kisjozsitech.hu, Anna Kiss kiss.anna@kisjozsitech.hu, Zsuzsa Varga varga.zsuzsa@kisjozsitech.hu, Eszter Szabó szabo.eszter@kisjozsitech.hu
+Date: Mon, 09 Jun 2025 12:00:00 +0200
+Subject: URGENT: Client Feedback on Demo
+
+Great, thanks for the quick feedback. I've created the tickets in JIRA. Eszter, I've informed the client that these will be fixed in the next round.
+Best,
+Péter
