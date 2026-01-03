@@ -255,3 +255,35 @@ PAYLOAD_JSON:
   - keep quotes short (1–3, ~1 line each).
 - **Caching + reuse where possible:** for repeated runs on the same emails, cache per-thread results keyed by a content hash (reduces repeated LLM calls; may benefit from cached-input pricing where supported).
 - **Configurable cost controls:** models are set via env vars (`OPENAI_ANALYZE_MODEL`, `OPENAI_RESOLVE_MODEL`, `OPENAI_SUMMARY_MODEL`) so we can tune cost/performance without code changes and align with current pricing.
+
+## 4. Monitoring & Trust
+
+### 4.1 How we keep it accurate and trustworthy
+
+- **Grounding + auditability by design:** every extracted issue must carry **verbatim evidence quotes** with evidence IDs, so a it can be quickly verified in the original thread.
+- **Automated evaluation on a test set:** maintain a small but representative labeled dataset of threads (expected issues, flags, severity, resolved status). Run it:
+  - on every prompt/model change (CI),
+  - on a schedule (daily/weekly),
+  - and as canary checks in production.
+- **Online observability / traceability:** log (non-sensitive) traces per run: model versions, prompt versions, schema validation results, and evidence IDs with tools like LangSmith-style tracing (makes it easy to debug regressions and compare variants).
+- **Human-in-the-loop for edge cases:** route `status=unknown` and low-confidence cases to review; use those reviewed examples to expand the test set (continuous improvement loop).
+- **Drift detection:** monitor shifts in input data (email length, languages, topic distribution) and output distribution (more “unknown”, fewer issues, severity changes) and trigger re-evaluation when distributions change significantly.
+
+### 4.2 Key metrics to track
+
+**Quality / correctness**
+- **Faithfulness / grounding rate:** % of outputs where all evidence quotes are present and support the claim (or LLM-as-judge “faithfulness”).
+- **Issue precision & recall (test set):** false positives (noise flagged as risk) vs missed critical risks.
+- **Resolution accuracy:** % correct `resolved/unresolved/unknown` vs labeled truth (especially important for “resolved later” logic).
+- **Duplicate rate:** % of threads where the system emits semantically duplicate issues (should be near zero).
+- **Unknown rate:** % of issues marked `unknown` (too high → model uncertainty; too low → likely overconfidence/hallucination).
+
+**Reliability / ops**
+- **Schema validation failure rate:** structured-output parsing errors, retries, fallbacks.
+- **End-to-end latency:**  runtime per thread.
+- **Error rate & rate-limit events:** API failures, timeouts, backoff/retry counts.
+
+**Cost**
+- **Tokens and cost per thread / per run:** input/output tokens by step (draft/resolve/summary), plus monthly cost trend.
+- **Cache hit rate:** % of threads served from cached results (when re-running on unchanged data).
+- **Cost per “useful item”:** cost divided by number of unresolved/unknown items surfaced (helps justify spend).
