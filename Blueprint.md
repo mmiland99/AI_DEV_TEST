@@ -72,7 +72,7 @@ flowchart LR
 
 For **each drafted issue**:
 
-- **Input:** full thread + the issue JSON + optional heuristic “resolution snippets”
+- **Input:** full thread + the issue JSON + optional “resolution snippets”
 - **Output (structured):** `status ∈ {resolved, unresolved, unknown}` plus:
   - `resolution_quotes` (1–3 **verbatim** quotes proving resolution)
   - short rationale (“why resolved/unresolved/unknown”)
@@ -110,3 +110,51 @@ All model choices are configurable by environment variables:
 
 This allows cost/performance tuning without code changes.
 
+```mermaid
+flowchart LR
+  A[Parse email*.txt into messages] --> B[Build full thread_text with [MSG 1..N]]
+  B --> C[Step 1: Draft issues (AI)\n- deduplicate\n- classify A/B\n- evidence quotes + rationale]
+  C --> D[Step 2: Resolution adjudication (AI)\n- resolved/unresolved/unknown\n- resolution proof quotes]
+  D --> E[Deterministic guardrails\n- quotes must exist\n- resolution must be later]
+  E --> F[Attention Flags output\n- keep only unresolved/unknown]
+  F --> G[Step 3: Executive summary (AI)\n- short, actionable\n- references evidence IDs]
+  G --> H[Artifacts: report.json + report.md]
+  ```
+
+### Engineered prompts used in the code (full text + intent)
+
+This PoC uses **three prompt pairs** (System + User) aligned to the three AI steps:
+- **Draft** (extract + deduplicate + classify issues)
+- **Resolve** (decide if each issue was resolved later in the thread, with proof)
+- **Summarize** (Director-ready output, grounded in evidence IDs)
+
+Each step is separated to keep the model’s job narrow and measurable, and to enforce *grounding* via verbatim quotes.
+
+---
+
+#### 1) Issue drafting prompts (THREAD_SYSTEM + THREAD_USER)
+
+**Goal:** From the full email thread, produce a **deduplicated** list of issues, labeled as Flag A or Flag B, each backed by **verbatim evidence quotes**.
+
+```text
+THREAD_SYSTEM:
+You are a Director-level QBR analyst for project delivery email threads.
+Return ONLY issues supported by verbatim quotes from the provided thread.
+IMPORTANT: NO duplicates — merge repeated mentions of the same incident into ONE issue.
+Do not guess.
+
+THREAD_USER:
+Analyze the full email thread and return a deduplicated list of issues.
+
+Definitions:
+- Attention Flag A_unresolved_action_item: explicit asks/questions/tasks/decisions needed.
+- Attention Flag B_emerging_risk_blocker: blockers/incidents/risks (prod issues, outages, scope/timeline risks, etc.).
+
+Rules (strict):
+1) NO duplicates: merge repeated mentions of the same incident/task into one issue.
+2) severity_or_priority: low|medium|high (use high only for explicit cues like URGENT, panic, prod/live impact, "all hands").
+3) evidence_quotes: 1-3 short verbatim quotes that demonstrate the PROBLEM / ASK.
+4) rationale_flag_level: 1-2 sentences explaining why it’s A or B and why the level.
+
+THREAD (verbatim):
+{thread_text}

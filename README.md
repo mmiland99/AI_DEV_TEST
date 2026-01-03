@@ -8,12 +8,6 @@ This is a test case AI Agent for an interview at Attracto
   2) verify/ground each extracted item (`gpt-4o-mini`)
   3) prioritize and generate an executive Portfolio Health report (`gpt-5-mini`)
 
-## Setup
-Install dependencies:
-```bash
-pip install openai pydantic
-```
-
 Set credentials (recommended via environment variable, do not hardcode):
 ```bash
 export OPENAI_API_KEY="YOUR_KEY"
