@@ -1,0 +1,1055 @@
+{
+  "generated_at": "2026-01-03T15:26:29.718965+00:00",
+  "threads": [
+    {
+      "thread_id": "email6",
+      "source_files": [
+        "email6.txt"
+      ],
+      "time_range": {
+        "start": "2025-06-09T11:00:00+02:00",
+        "end": "2026-01-03T15:26:29.715963+00:00"
+      },
+      "attention_flags": {
+        "A_unresolved_action_items": [
+          {
+            "type": "action_item",
+            "subject": "URGENT: Client Feedback on Demo",
+            "opened_at": "2026-01-03T15:26:29.715963+00:00",
+            "title": "Login Button Repositioning",
+            "priority": "medium",
+            "flag": "A_unresolved_action_item",
+            "status": "unresolved",
+            "resolved_later": false,
+            "rationale_flag_level": "This is a specific task that needs to be completed based on client feedback, requiring confirmation of commitment.",
+            "rationale_status": "The thread indicates that actions are planned to address the client's feedback, but there is no confirmation that the changes have been implemented or tested. The last message mentions that tickets have been created, but it does not confirm that the login button repositioning has been completed.",
+            "evidence_ids": [
+              "E7"
+            ],
+            "evidence_quotes": [
+              "The login button could be in the top right corner."
+            ],
+            "resolution_evidence_ids": [],
+            "resolution_quotes": []
+          }
+        ],
+        "B_emerging_risks_blockers": [
+          {
+            "type": "risk",
+            "subject": "URGENT: Client Feedback on Demo",
+            "opened_at": "2026-01-03T15:26:29.715963+00:00",
+            "title": "Slider Images Loading Slowly",
+            "severity": "high",
+            "flag": "B_emerging_risk_blocker",
+            "status": "unresolved",
+            "resolved_later": false,
+            "rationale_flag_level": "This is a critical issue affecting the user experience and needs immediate attention to avoid client dissatisfaction.",
+            "rationale_status": "While there are indications that the team is aware of the issues and has created tickets to address them, there is no confirmation that the fixes have been implemented or tested. The last message indicates plans to fix the issues, but does not confirm resolution.",
+            "evidence_ids": [
+              "E4",
+              "E5"
+            ],
+            "evidence_quotes": [
+              "The images in the main slider are loading too slowly.",
+              "I'll look into the slider images; it's probably an issue with compression."
+            ],
+            "resolution_evidence_ids": [],
+            "resolution_quotes": []
+          },
+          {
+            "type": "risk",
+            "subject": "URGENT: Client Feedback on Demo",
+            "opened_at": "2026-01-03T15:26:29.715963+00:00",
+            "title": "Clickable Company Logo in Footer",
+            "severity": "medium",
+            "flag": "B_emerging_risk_blocker",
+            "status": "unresolved",
+            "resolved_later": false,
+            "rationale_flag_level": "The client considers the footer logo's functionality important for brand consistency, which is a usability issue.",
+            "rationale_status": "While there is acknowledgment of the issues and tickets created for resolution, there is no confirmation that the specific issue of making the footer logo clickable has been completed or tested. The thread indicates that fixes will be implemented in the next round, but does not confirm that they have been resolved yet.",
+            "evidence_ids": [
+              "E6"
+            ],
+            "evidence_quotes": [
+              "The company logo in the footer should also be clickable and lead to the homepage, just like the one in the header."
+            ],
+            "resolution_evidence_ids": [],
+            "resolution_quotes": []
+          }
+        ]
+      },
+      "all_issues": [
+        {
+          "type": "action_item",
+          "subject": "URGENT: Client Feedback on Demo",
+          "opened_at": "2026-01-03T15:26:29.715963+00:00",
+          "title": "Client Feedback on Demo - Action Items",
+          "priority": "medium",
+          "flag": "A_unresolved_action_item",
+          "status": "resolved",
+          "resolved_later": true,
+          "rationale_flag_level": "These are explicit asks from the client that need to be addressed before the next demo. The team needs to commit to these changes.",
+          "rationale_status": "The team has acknowledged the client feedback and created tickets in JIRA to address the issues. They have also informed the client that these changes will be fixed in the next round, indicating a commitment to resolve the action items before the next demo.",
+          "evidence_ids": [
+            "E1",
+            "E2"
+          ],
+          "evidence_quotes": [
+            "Péter, can we still commit to these before the next demo?",
+            "Please estimate these."
+          ],
+          "resolution_evidence_ids": [
+            "E3"
+          ],
+          "resolution_quotes": [
+            "Great, thanks for the quick feedback. I've created the tickets in JIRA. Eszter, I've informed the client that these will be fixed in the next round."
+          ]
+        },
+        {
+          "type": "risk",
+          "subject": "URGENT: Client Feedback on Demo",
+          "opened_at": "2026-01-03T15:26:29.715963+00:00",
+          "title": "Slider Images Loading Slowly",
+          "severity": "high",
+          "flag": "B_emerging_risk_blocker",
+          "status": "unresolved",
+          "resolved_later": false,
+          "rationale_flag_level": "This is a critical issue affecting the user experience and needs immediate attention to avoid client dissatisfaction.",
+          "rationale_status": "While there are indications that the team is aware of the issues and has created tickets to address them, there is no confirmation that the fixes have been implemented or tested. The last message indicates plans to fix the issues, but does not confirm resolution.",
+          "evidence_ids": [
+            "E4",
+            "E5"
+          ],
+          "evidence_quotes": [
+            "The images in the main slider are loading too slowly.",
+            "I'll look into the slider images; it's probably an issue with compression."
+          ],
+          "resolution_evidence_ids": [],
+          "resolution_quotes": []
+        },
+        {
+          "type": "risk",
+          "subject": "URGENT: Client Feedback on Demo",
+          "opened_at": "2026-01-03T15:26:29.715963+00:00",
+          "title": "Clickable Company Logo in Footer",
+          "severity": "medium",
+          "flag": "B_emerging_risk_blocker",
+          "status": "unresolved",
+          "resolved_later": false,
+          "rationale_flag_level": "The client considers the footer logo's functionality important for brand consistency, which is a usability issue.",
+          "rationale_status": "While there is acknowledgment of the issues and tickets created for resolution, there is no confirmation that the specific issue of making the footer logo clickable has been completed or tested. The thread indicates that fixes will be implemented in the next round, but does not confirm that they have been resolved yet.",
+          "evidence_ids": [
+            "E6"
+          ],
+          "evidence_quotes": [
+            "The company logo in the footer should also be clickable and lead to the homepage, just like the one in the header."
+          ],
+          "resolution_evidence_ids": [],
+          "resolution_quotes": []
+        },
+        {
+          "type": "action_item",
+          "subject": "URGENT: Client Feedback on Demo",
+          "opened_at": "2026-01-03T15:26:29.715963+00:00",
+          "title": "Login Button Repositioning",
+          "priority": "medium",
+          "flag": "A_unresolved_action_item",
+          "status": "unresolved",
+          "resolved_later": false,
+          "rationale_flag_level": "This is a specific task that needs to be completed based on client feedback, requiring confirmation of commitment.",
+          "rationale_status": "The thread indicates that actions are planned to address the client's feedback, but there is no confirmation that the changes have been implemented or tested. The last message mentions that tickets have been created, but it does not confirm that the login button repositioning has been completed.",
+          "evidence_ids": [
+            "E7"
+          ],
+          "evidence_quotes": [
+            "The login button could be in the top right corner."
+          ],
+          "resolution_evidence_ids": [],
+          "resolution_quotes": []
+        }
+      ],
+      "evidence": {
+        "E1": "Péter, can we still commit to these before the next demo?",
+        "E2": "Please estimate these.",
+        "E3": "Great, thanks for the quick feedback. I've created the tickets in JIRA. Eszter, I've informed the client that these will be fixed in the next round.",
+        "E4": "The images in the main slider are loading too slowly.",
+        "E5": "I'll look into the slider images; it's probably an issue with compression.",
+        "E6": "The company logo in the footer should also be clickable and lead to the homepage, just like the one in the header.",
+        "E7": "The login button could be in the top right corner."
+      },
+      "executive_summary_md": "Attention Flag A — Action items (unresolved):\n\n- Login Button Repositioning — Confirm commitment to implement the login button move (top-right), provide an estimate, and validate the change in the next demo. [E7][E1][E2][E3]\n\nAttention Flag B — Risks (unresolved):\n\n- Slider Images Loading Slowly (high) — Investigate compression/performance, implement fixes, provide ETA, and validate improved load times before the next demo. [E4][E5][E3]\n\n- Clickable Company Logo in Footer (medium) — Implement footer logo link to the homepage, deploy and test, and confirm resolution. [E6][E3]"
+    },
+    {
+      "thread_id": "email13",
+      "source_files": [
+        "email13.txt"
+      ],
+      "time_range": {
+        "start": "2025-06-29T10:30:00+00:00",
+        "end": "2026-01-03T15:26:29.703963+00:00"
+      },
+      "attention_flags": {
+        "A_unresolved_action_items": [
+          {
+            "type": "action_item",
+            "subject": "Re: DivatKirály - Weekly status and development progress",
+            "opened_at": "2026-01-03T15:26:29.702963+00:00",
+            "title": "Discuss lunch options during morning standup",
+            "priority": "low",
+            "flag": "A_unresolved_action_item",
+            "status": "unresolved",
+            "resolved_later": false,
+            "rationale_flag_level": "This is an explicit ask to discuss lunch options, which is not directly related to project delivery but needs to be addressed.",
+            "rationale_status": "The issue regarding discussing lunch options during the morning standup was acknowledged, but there is no indication that it was actually resolved or discussed in the thread. The conversation remains focused on the lunch topic without a definitive conclusion.",
+            "evidence_ids": [
+              "E1",
+              "E2"
+            ],
+            "evidence_quotes": [
+              "let's discuss the lunch topic during the morning standup",
+              "everyone think about whether it's pizza or Mexican."
+            ],
+            "resolution_evidence_ids": [],
+            "resolution_quotes": []
+          }
+        ],
+        "B_emerging_risks_blockers": [
+          {
+            "type": "risk",
+            "subject": "Re: DivatKirály - Weekly status and development progress",
+            "opened_at": "2026-01-03T15:26:29.702963+00:00",
+            "title": "Issues with payment gateway",
+            "severity": "medium",
+            "flag": "B_emerging_risk_blocker",
+            "status": "unresolved",
+            "resolved_later": false,
+            "rationale_flag_level": "This indicates a potential blocker in the project as it is a critical component that needs to be resolved for progress.",
+            "rationale_status": "The thread indicates ongoing issues with the payment gateway, as Gábor mentions he is still wrestling with it. There are no updates or resolutions provided later in the thread that confirm the issue has been resolved.",
+            "evidence_ids": [
+              "E3"
+            ],
+            "evidence_quotes": [
+              "I still have to wrestle with the payment gateway this week."
+            ],
+            "resolution_evidence_ids": [],
+            "resolution_quotes": []
+          }
+        ]
+      },
+      "all_issues": [
+        {
+          "type": "action_item",
+          "subject": "Re: DivatKirály - Weekly status and development progress",
+          "opened_at": "2026-01-03T15:26:29.702963+00:00",
+          "title": "Discuss lunch options during morning standup",
+          "priority": "low",
+          "flag": "A_unresolved_action_item",
+          "status": "unresolved",
+          "resolved_later": false,
+          "rationale_flag_level": "This is an explicit ask to discuss lunch options, which is not directly related to project delivery but needs to be addressed.",
+          "rationale_status": "The issue regarding discussing lunch options during the morning standup was acknowledged, but there is no indication that it was actually resolved or discussed in the thread. The conversation remains focused on the lunch topic without a definitive conclusion.",
+          "evidence_ids": [
+            "E1",
+            "E2"
+          ],
+          "evidence_quotes": [
+            "let's discuss the lunch topic during the morning standup",
+            "everyone think about whether it's pizza or Mexican."
+          ],
+          "resolution_evidence_ids": [],
+          "resolution_quotes": []
+        },
+        {
+          "type": "risk",
+          "subject": "Re: DivatKirály - Weekly status and development progress",
+          "opened_at": "2026-01-03T15:26:29.702963+00:00",
+          "title": "Issues with payment gateway",
+          "severity": "medium",
+          "flag": "B_emerging_risk_blocker",
+          "status": "unresolved",
+          "resolved_later": false,
+          "rationale_flag_level": "This indicates a potential blocker in the project as it is a critical component that needs to be resolved for progress.",
+          "rationale_status": "The thread indicates ongoing issues with the payment gateway, as Gábor mentions he is still wrestling with it. There are no updates or resolutions provided later in the thread that confirm the issue has been resolved.",
+          "evidence_ids": [
+            "E3"
+          ],
+          "evidence_quotes": [
+            "I still have to wrestle with the payment gateway this week."
+          ],
+          "resolution_evidence_ids": [],
+          "resolution_quotes": []
+        }
+      ],
+      "evidence": {
+        "E1": "let's discuss the lunch topic during the morning standup",
+        "E2": "everyone think about whether it's pizza or Mexican.",
+        "E3": "I still have to wrestle with the payment gateway this week."
+      },
+      "executive_summary_md": "Attention Flag A — Action items (unresolved)\n- Discuss lunch options during morning standup (low priority). Evidence: [E1][E2]. Action: assign an owner to confirm the choice and close the item before the next standup.\n\nAttention Flag B — Risks (unresolved)\n- Issues with payment gateway (medium severity — potential blocker). Evidence: [E3]. Action: assign a technical owner to triage immediately and provide a progress update at the next status meeting."
+    },
+    {
+      "thread_id": "email2",
+      "source_files": [
+        "email2.txt"
+      ],
+      "time_range": {
+        "start": "2025-06-30T11:00:00+02:00",
+        "end": "2026-01-03T15:26:29.710966+00:00"
+      },
+      "attention_flags": {
+        "A_unresolved_action_items": [
+          {
+            "type": "action_item",
+            "subject": "Project Phoenix - Weekly Status Reports EOD",
+            "opened_at": "2026-01-03T15:26:29.710966+00:00",
+            "title": "Weekly Status Reports Submission",
+            "priority": "medium",
+            "flag": "A_unresolved_action_item",
+            "status": "unresolved",
+            "resolved_later": false,
+            "rationale_flag_level": "The team is required to submit their weekly status reports, which is an explicit ask from Péter. The deadline is end of day (EOD), indicating a need for timely action.",
+            "rationale_status": "The thread does not provide any confirmation that the weekly status reports were submitted by the end of the day as requested. There are no follow-up messages indicating that the reports were completed or acknowledged.",
+            "evidence_ids": [
+              "E1"
+            ],
+            "evidence_quotes": [
+              "Please send your usual weekly status reports by end of day (EOD) in a sentence or two: what you've been working on this week, and if there are any blockers."
+            ],
+            "resolution_evidence_ids": [],
+            "resolution_quotes": []
+          }
+        ],
+        "B_emerging_risks_blockers": [
+          {
+            "type": "risk",
+            "subject": "Project Phoenix - Weekly Status Reports EOD",
+            "opened_at": "2026-01-03T15:26:29.710966+00:00",
+            "title": "Potential Delay in Status Reports",
+            "severity": "medium",
+            "flag": "B_emerging_risk_blocker",
+            "status": "unresolved",
+            "resolved_later": false,
+            "rationale_flag_level": "The request for status reports indicates a potential risk if team members do not submit their updates on time, which could affect project visibility and decision-making.",
+            "rationale_status": "The thread does not provide clear evidence that the status reports were submitted or that the potential delay was resolved. The last message indicates an expectation for reports but does not confirm their submission.",
+            "evidence_ids": [
+              "E2"
+            ],
+            "evidence_quotes": [
+              "I'll send the report shortly."
+            ],
+            "resolution_evidence_ids": [],
+            "resolution_quotes": []
+          }
+        ]
+      },
+      "all_issues": [
+        {
+          "type": "action_item",
+          "subject": "Project Phoenix - Weekly Status Reports EOD",
+          "opened_at": "2026-01-03T15:26:29.710966+00:00",
+          "title": "Weekly Status Reports Submission",
+          "priority": "medium",
+          "flag": "A_unresolved_action_item",
+          "status": "unresolved",
+          "resolved_later": false,
+          "rationale_flag_level": "The team is required to submit their weekly status reports, which is an explicit ask from Péter. The deadline is end of day (EOD), indicating a need for timely action.",
+          "rationale_status": "The thread does not provide any confirmation that the weekly status reports were submitted by the end of the day as requested. There are no follow-up messages indicating that the reports were completed or acknowledged.",
+          "evidence_ids": [
+            "E1"
+          ],
+          "evidence_quotes": [
+            "Please send your usual weekly status reports by end of day (EOD) in a sentence or two: what you've been working on this week, and if there are any blockers."
+          ],
+          "resolution_evidence_ids": [],
+          "resolution_quotes": []
+        },
+        {
+          "type": "risk",
+          "subject": "Project Phoenix - Weekly Status Reports EOD",
+          "opened_at": "2026-01-03T15:26:29.710966+00:00",
+          "title": "Potential Delay in Status Reports",
+          "severity": "medium",
+          "flag": "B_emerging_risk_blocker",
+          "status": "unresolved",
+          "resolved_later": false,
+          "rationale_flag_level": "The request for status reports indicates a potential risk if team members do not submit their updates on time, which could affect project visibility and decision-making.",
+          "rationale_status": "The thread does not provide clear evidence that the status reports were submitted or that the potential delay was resolved. The last message indicates an expectation for reports but does not confirm their submission.",
+          "evidence_ids": [
+            "E2"
+          ],
+          "evidence_quotes": [
+            "I'll send the report shortly."
+          ],
+          "resolution_evidence_ids": [],
+          "resolution_quotes": []
+        }
+      ],
+      "evidence": {
+        "E1": "Please send your usual weekly status reports by end of day (EOD) in a sentence or two: what you've been working on this week, and if there are any blockers.",
+        "E2": "I'll send the report shortly."
+      },
+      "executive_summary_md": "Portfolio Health — Executive Summary\n\nAttention Flag A — Unresolved Action Items:\n- Project Phoenix — Weekly Status Reports: Team was asked to submit one-line weekly updates by EOD; no confirmation of submission found. Action: confirm receipt of all reports and request missing updates immediately. [E1]\n\nAttention Flag B — Unresolved Risks:\n- Potential delay in Status Reports: lack of confirmed submissions threatens project visibility; one respondent said, “I’ll send the report shortly.” Action: verify that promised reports arrived; escalate to project lead if not received within agreed timeframe. [E2]"
+    },
+    {
+      "thread_id": "email7",
+      "source_files": [
+        "email7.txt"
+      ],
+      "time_range": {
+        "start": "2025-06-09T10:15:00+00:00",
+        "end": "2025-06-23T14:35:00+00:00"
+      },
+      "attention_flags": {
+        "A_unresolved_action_items": [
+          {
+            "type": "action_item",
+            "subject": "Project Status - Weekly Summary",
+            "opened_at": "2025-06-09T10:15:00+00:00",
+            "title": "Feedback on Homepage Design",
+            "priority": "medium",
+            "flag": "A_unresolved_action_item",
+            "status": "unresolved",
+            "resolved_later": false,
+            "rationale_flag_level": "This is an unresolved action item as Gábor is awaiting feedback from the client regarding the homepage design. The lack of feedback could delay further development.",
+            "rationale_status": "The thread indicates that Gábor is still awaiting feedback from the client regarding the homepage design, which has not been confirmed or resolved by the end of the thread.",
+            "evidence_ids": [
+              "E1"
+            ],
+            "evidence_quotes": [
+              "Zoltán, was there any feedback from the client regarding the homepage design presented last week?"
+            ],
+            "resolution_evidence_ids": [],
+            "resolution_quotes": []
+          },
+          {
+            "type": "action_item",
+            "subject": "Re: Project Status - Weekly Summary",
+            "opened_at": "2025-06-23T14:20:00+00:00",
+            "title": "Modification Request from Client",
+            "priority": "medium",
+            "flag": "A_unresolved_action_item",
+            "status": "unresolved",
+            "resolved_later": false,
+            "rationale_flag_level": "The client has requested a modification in the header of the design, which needs to be addressed to meet client expectations.",
+            "rationale_status": "The client requested a modification in the header, and while it was acknowledged, there is no indication that the modification has been completed or tested. The issue remains open as it has been added to the backlog for future action.",
+            "evidence_ids": [
+              "E2"
+            ],
+            "evidence_quotes": [
+              "the client liked the design but requested a small modification in the header."
+            ],
+            "resolution_evidence_ids": [],
+            "resolution_quotes": []
+          }
+        ],
+        "B_emerging_risks_blockers": []
+      },
+      "all_issues": [
+        {
+          "type": "action_item",
+          "subject": "Project Status - Weekly Summary",
+          "opened_at": "2025-06-09T10:15:00+00:00",
+          "title": "Feedback on Homepage Design",
+          "priority": "medium",
+          "flag": "A_unresolved_action_item",
+          "status": "unresolved",
+          "resolved_later": false,
+          "rationale_flag_level": "This is an unresolved action item as Gábor is awaiting feedback from the client regarding the homepage design. The lack of feedback could delay further development.",
+          "rationale_status": "The thread indicates that Gábor is still awaiting feedback from the client regarding the homepage design, which has not been confirmed or resolved by the end of the thread.",
+          "evidence_ids": [
+            "E1"
+          ],
+          "evidence_quotes": [
+            "Zoltán, was there any feedback from the client regarding the homepage design presented last week?"
+          ],
+          "resolution_evidence_ids": [],
+          "resolution_quotes": []
+        },
+        {
+          "type": "action_item",
+          "subject": "Re: Project Status - Weekly Summary",
+          "opened_at": "2025-06-23T14:20:00+00:00",
+          "title": "Modification Request from Client",
+          "priority": "medium",
+          "flag": "A_unresolved_action_item",
+          "status": "unresolved",
+          "resolved_later": false,
+          "rationale_flag_level": "The client has requested a modification in the header of the design, which needs to be addressed to meet client expectations.",
+          "rationale_status": "The client requested a modification in the header, and while it was acknowledged, there is no indication that the modification has been completed or tested. The issue remains open as it has been added to the backlog for future action.",
+          "evidence_ids": [
+            "E2"
+          ],
+          "evidence_quotes": [
+            "the client liked the design but requested a small modification in the header."
+          ],
+          "resolution_evidence_ids": [],
+          "resolution_quotes": []
+        }
+      ],
+      "evidence": {
+        "E1": "Zoltán, was there any feedback from the client regarding the homepage design presented last week?",
+        "E2": "the client liked the design but requested a small modification in the header."
+      },
+      "executive_summary_md": "Attention Flag A — Unresolved/Unknown:\n\n- Feedback on Homepage Design (opened 2025-06-09, priority: medium): Client feedback on the presented homepage is still outstanding; action — obtain client confirmation to avoid development delays. [E1]\n\n- Modification Request from Client (opened 2025-06-23, priority: medium): Client requested a small header modification; issue remains open (added to backlog); action — schedule/assign the header change, test, and confirm with the client. [E2]\n\nAttention Flag B — Unresolved/Unknown:\n\n- None."
+    },
+    {
+      "thread_id": "email8",
+      "source_files": [
+        "email8.txt"
+      ],
+      "time_range": {
+        "start": "2025-06-30T10:05:00+00:00",
+        "end": "2025-06-30T10:35:00+00:00"
+      },
+      "attention_flags": {
+        "A_unresolved_action_items": [
+          {
+            "type": "action_item",
+            "subject": "Re: Friday Surprise",
+            "opened_at": "2025-06-30T10:12:00+00:00",
+            "title": "Decision on Gábor's birthday gift",
+            "priority": "medium",
+            "flag": "A_unresolved_action_item",
+            "status": "unresolved",
+            "resolved_later": false,
+            "rationale_flag_level": "This is an unresolved action item as the team is discussing what type of gift to get for Gábor's birthday. The decision on the gift is still pending.",
+            "rationale_status": "The team is still discussing the type of gift for Gábor's birthday, and no final decision has been made by the end of the thread. There are no confirmation or resolution quotes indicating that a decision was reached.",
+            "evidence_ids": [
+              "E1",
+              "E2",
+              "E3"
+            ],
+            "evidence_quotes": [
+              "Any ideas for the gift? Something funny gadget, or rather a good bottle of wine?",
+              "Should I get a marzipan one, he likes that, right?",
+              "marzipan gives me the shivers. But any chocolate one is welcome!"
+            ],
+            "resolution_evidence_ids": [],
+            "resolution_quotes": []
+          }
+        ],
+        "B_emerging_risks_blockers": [
+          {
+            "type": "risk",
+            "subject": "Re: Project Status - Weekly Summary",
+            "opened_at": "2025-06-30T10:28:00+00:00",
+            "title": "Review of filtering logic for product list page",
+            "severity": "medium",
+            "flag": "B_emerging_risk_blocker",
+            "status": "unresolved",
+            "resolved_later": false,
+            "rationale_flag_level": "This is an emerging risk as it indicates a need for review of the filtering logic, which could impact the project timeline if not addressed promptly.",
+            "rationale_status": "The thread discusses a birthday surprise and includes a mention of reviewing the filtering logic for the product list page, but there is no confirmation that the review was completed or that any issues were resolved. The last message indicates a return to work but does not confirm the status of the filtering logic review.",
+            "evidence_ids": [
+              "E4"
+            ],
+            "evidence_quotes": [
+              "Bence and I will review the filtering logic for the product list page today."
+            ],
+            "resolution_evidence_ids": [],
+            "resolution_quotes": []
+          }
+        ]
+      },
+      "all_issues": [
+        {
+          "type": "action_item",
+          "subject": "Re: Friday Surprise",
+          "opened_at": "2025-06-30T10:12:00+00:00",
+          "title": "Decision on Gábor's birthday gift",
+          "priority": "medium",
+          "flag": "A_unresolved_action_item",
+          "status": "unresolved",
+          "resolved_later": false,
+          "rationale_flag_level": "This is an unresolved action item as the team is discussing what type of gift to get for Gábor's birthday. The decision on the gift is still pending.",
+          "rationale_status": "The team is still discussing the type of gift for Gábor's birthday, and no final decision has been made by the end of the thread. There are no confirmation or resolution quotes indicating that a decision was reached.",
+          "evidence_ids": [
+            "E1",
+            "E2",
+            "E3"
+          ],
+          "evidence_quotes": [
+            "Any ideas for the gift? Something funny gadget, or rather a good bottle of wine?",
+            "Should I get a marzipan one, he likes that, right?",
+            "marzipan gives me the shivers. But any chocolate one is welcome!"
+          ],
+          "resolution_evidence_ids": [],
+          "resolution_quotes": []
+        },
+        {
+          "type": "risk",
+          "subject": "Re: Project Status - Weekly Summary",
+          "opened_at": "2025-06-30T10:28:00+00:00",
+          "title": "Review of filtering logic for product list page",
+          "severity": "medium",
+          "flag": "B_emerging_risk_blocker",
+          "status": "unresolved",
+          "resolved_later": false,
+          "rationale_flag_level": "This is an emerging risk as it indicates a need for review of the filtering logic, which could impact the project timeline if not addressed promptly.",
+          "rationale_status": "The thread discusses a birthday surprise and includes a mention of reviewing the filtering logic for the product list page, but there is no confirmation that the review was completed or that any issues were resolved. The last message indicates a return to work but does not confirm the status of the filtering logic review.",
+          "evidence_ids": [
+            "E4"
+          ],
+          "evidence_quotes": [
+            "Bence and I will review the filtering logic for the product list page today."
+          ],
+          "resolution_evidence_ids": [],
+          "resolution_quotes": []
+        }
+      ],
+      "evidence": {
+        "E1": "Any ideas for the gift? Something funny gadget, or rather a good bottle of wine?",
+        "E2": "Should I get a marzipan one, he likes that, right?",
+        "E3": "marzipan gives me the shivers. But any chocolate one is welcome!",
+        "E4": "Bence and I will review the filtering logic for the product list page today."
+      },
+      "executive_summary_md": "Attention Flag A — Unresolved action items:\n- Decision on Gábor's birthday gift — team still debating options (gadget, bottle of wine, marzipan/chocolate); requires final selection, an owner and a deadline. Evidence: [E1, E2, E3].\n\nAttention Flag B — Unresolved risks:\n- Review of filtering logic for product list page — review stated but no confirmation of completion; potential impact if issues found. Confirm review status, capture findings, and assign owner/due date. Evidence: [E4]."
+    },
+    {
+      "thread_id": "email10",
+      "source_files": [
+        "email10.txt"
+      ],
+      "time_range": {
+        "start": "2025-07-02T16:20:00+00:00",
+        "end": "2025-07-03T10:50:00+00:00"
+      },
+      "attention_flags": {
+        "A_unresolved_action_items": [
+          {
+            "type": "action_item",
+            "subject": "User Profile Page - Data Modification Flow",
+            "opened_at": "2025-07-02T16:20:00+00:00",
+            "title": "Confirmation Email After Password Change",
+            "priority": "medium",
+            "flag": "A_unresolved_action_item",
+            "status": "unresolved",
+            "resolved_later": false,
+            "rationale_flag_level": "There is a suggestion to implement a confirmation email after a password change, which has not yet been decided upon. This requires a decision to be made.",
+            "rationale_status": "The thread discusses the suggestion to implement a confirmation email after a password change, but no decision or implementation has been confirmed. The last message indicates that it is still on the to-do list, which means the issue remains unresolved.",
+            "evidence_ids": [
+              "E1",
+              "E2"
+            ],
+            "evidence_quotes": [
+              "should we send a confirmation email to the user after a password change?",
+              "Let's add the email after password modification to the to-do list."
+            ],
+            "resolution_evidence_ids": [],
+            "resolution_quotes": []
+          }
+        ],
+        "B_emerging_risks_blockers": []
+      },
+      "all_issues": [
+        {
+          "type": "action_item",
+          "subject": "User Profile Page - Data Modification Flow",
+          "opened_at": "2025-07-02T16:20:00+00:00",
+          "title": "Confirmation Email After Password Change",
+          "priority": "medium",
+          "flag": "A_unresolved_action_item",
+          "status": "unresolved",
+          "resolved_later": false,
+          "rationale_flag_level": "There is a suggestion to implement a confirmation email after a password change, which has not yet been decided upon. This requires a decision to be made.",
+          "rationale_status": "The thread discusses the suggestion to implement a confirmation email after a password change, but no decision or implementation has been confirmed. The last message indicates that it is still on the to-do list, which means the issue remains unresolved.",
+          "evidence_ids": [
+            "E1",
+            "E2"
+          ],
+          "evidence_quotes": [
+            "should we send a confirmation email to the user after a password change?",
+            "Let's add the email after password modification to the to-do list."
+          ],
+          "resolution_evidence_ids": [],
+          "resolution_quotes": []
+        }
+      ],
+      "evidence": {
+        "E1": "should we send a confirmation email to the user after a password change?",
+        "E2": "Let's add the email after password modification to the to-do list."
+      },
+      "executive_summary_md": "Attention Flag A — Unresolved:\n- User Profile Page - Data Modification Flow — Confirmation Email After Password Change (priority: medium). Status: unresolved; decision required whether to send a confirmation email (currently on the to‑do list). Evidence: [E1], [E2]. Immediate ask: approve or decline the confirmation-email change and assign an owner and target date.\n\nAttention Flag B — None."
+    },
+    {
+      "thread_id": "email11",
+      "source_files": [
+        "email11.txt"
+      ],
+      "time_range": {
+        "start": "2025-06-25T11:15:00+00:00",
+        "end": "2025-06-25T14:05:00+00:00"
+      },
+      "attention_flags": {
+        "A_unresolved_action_items": [
+          {
+            "type": "action_item",
+            "subject": "Request regarding report export",
+            "opened_at": "2025-06-25T11:15:00+00:00",
+            "title": "Request for CSV export of reports",
+            "priority": "medium",
+            "flag": "A_unresolved_action_item",
+            "status": "unresolved",
+            "resolved_later": false,
+            "rationale_flag_level": "This is an explicit request from the client for a feature that is currently not available. The request needs to be addressed to meet client expectations.",
+            "rationale_status": "The thread discusses a request for a CSV export feature, but there is no indication that the feature has been implemented or confirmed as working by the end of the thread. The last message only mentions the feasibility and the need to assess development effort, without any resolution or confirmation of completion.",
+            "evidence_ids": [
+              "E1",
+              "E2"
+            ],
+            "evidence_quotes": [
+              "Would it be possible to export in CSV format as well?",
+              "They would like to be able to download monthly reports not only in PDF but also in CSV format."
+            ],
+            "resolution_evidence_ids": [],
+            "resolution_quotes": []
+          }
+        ],
+        "B_emerging_risks_blockers": []
+      },
+      "all_issues": [
+        {
+          "type": "action_item",
+          "subject": "Request regarding report export",
+          "opened_at": "2025-06-25T11:15:00+00:00",
+          "title": "Request for CSV export of reports",
+          "priority": "medium",
+          "flag": "A_unresolved_action_item",
+          "status": "unresolved",
+          "resolved_later": false,
+          "rationale_flag_level": "This is an explicit request from the client for a feature that is currently not available. The request needs to be addressed to meet client expectations.",
+          "rationale_status": "The thread discusses a request for a CSV export feature, but there is no indication that the feature has been implemented or confirmed as working by the end of the thread. The last message only mentions the feasibility and the need to assess development effort, without any resolution or confirmation of completion.",
+          "evidence_ids": [
+            "E1",
+            "E2"
+          ],
+          "evidence_quotes": [
+            "Would it be possible to export in CSV format as well?",
+            "They would like to be able to download monthly reports not only in PDF but also in CSV format."
+          ],
+          "resolution_evidence_ids": [],
+          "resolution_quotes": []
+        }
+      ],
+      "evidence": {
+        "E1": "Would it be possible to export in CSV format as well?",
+        "E2": "They would like to be able to download monthly reports not only in PDF but also in CSV format."
+      },
+      "executive_summary_md": "Attention Flag A — Unresolved\n- Request: CSV export for monthly reports (client wants CSV in addition to PDF). Status: unresolved. Action: assess feasibility and provide a development-effort estimate and timeline to the client. [E1][E2]\n\nAttention Flag B — Unresolved\n- None (no unresolved or unknown items)."
+    },
+    {
+      "thread_id": "email14",
+      "source_files": [
+        "email14.txt"
+      ],
+      "time_range": {
+        "start": "2025-05-26T10:15:00+00:00",
+        "end": "2026-01-03T15:26:29.703963+00:00"
+      },
+      "attention_flags": {
+        "A_unresolved_action_items": [
+          {
+            "type": "action_item",
+            "subject": "Re: DivatKirály webshop - Homepage design feedback",
+            "opened_at": "2026-01-03T15:26:29.703963+00:00",
+            "title": "Clarification on 'Add to Cart' button modifications",
+            "priority": "medium",
+            "flag": "A_unresolved_action_item",
+            "status": "unresolved",
+            "resolved_later": false,
+            "rationale_flag_level": "This is an unresolved action item as it requires clarification from the client regarding their specific request for the 'Add to Cart' button. The urgency is medium since it affects the design but is not critical.",
+            "rationale_status": "The issue regarding the 'Add to Cart' button modifications remains unresolved as there is no confirmation from the client about their specific request. The last message indicates that the logo issue was addressed, but the button clarification is still pending.",
+            "evidence_ids": [
+              "E1"
+            ],
+            "evidence_quotes": [
+              "Does the client want a different color instead of the current green, or just for it to be larger/bold? This isn't clear."
+            ],
+            "resolution_evidence_ids": [],
+            "resolution_quotes": []
+          }
+        ],
+        "B_emerging_risks_blockers": []
+      },
+      "all_issues": [
+        {
+          "type": "action_item",
+          "subject": "Re: DivatKirály webshop - Homepage design feedback",
+          "opened_at": "2026-01-03T15:26:29.703963+00:00",
+          "title": "Clarification on 'Add to Cart' button modifications",
+          "priority": "medium",
+          "flag": "A_unresolved_action_item",
+          "status": "unresolved",
+          "resolved_later": false,
+          "rationale_flag_level": "This is an unresolved action item as it requires clarification from the client regarding their specific request for the 'Add to Cart' button. The urgency is medium since it affects the design but is not critical.",
+          "rationale_status": "The issue regarding the 'Add to Cart' button modifications remains unresolved as there is no confirmation from the client about their specific request. The last message indicates that the logo issue was addressed, but the button clarification is still pending.",
+          "evidence_ids": [
+            "E1"
+          ],
+          "evidence_quotes": [
+            "Does the client want a different color instead of the current green, or just for it to be larger/bold? This isn't clear."
+          ],
+          "resolution_evidence_ids": [],
+          "resolution_quotes": []
+        },
+        {
+          "type": "risk",
+          "subject": "Re: DivatKirály webshop - Homepage design feedback",
+          "opened_at": "2026-01-03T15:26:29.703963+00:00",
+          "title": "Potential mobile view issue after logo enlargement",
+          "severity": "medium",
+          "flag": "B_emerging_risk_blocker",
+          "status": "resolved",
+          "resolved_later": true,
+          "rationale_flag_level": "This is an emerging risk as there is a concern that enlarging the logo may affect the mobile view. The urgency is medium since it could impact user experience if not addressed.",
+          "rationale_status": "The issue regarding the potential mobile view problem after enlarging the logo has been resolved. Bence confirmed that the logo was enlarged and nothing was broken, and Eszter verified that the logo would be perfect for the client and stated it can go live.",
+          "evidence_ids": [
+            "E2"
+          ],
+          "evidence_quotes": [
+            "Bence, could you enlarge it by 15% in the header and check if it breaks the mobile view?"
+          ],
+          "resolution_evidence_ids": [
+            "E3",
+            "E4"
+          ],
+          "resolution_quotes": [
+            "I've enlarged the logo. Nothing is broken, I've sent the link from the test environment.",
+            "Great, the logo will be perfect for them this way, I've shown it to them. It can go live."
+          ]
+        }
+      ],
+      "evidence": {
+        "E1": "Does the client want a different color instead of the current green, or just for it to be larger/bold? This isn't clear.",
+        "E2": "Bence, could you enlarge it by 15% in the header and check if it breaks the mobile view?",
+        "E3": "I've enlarged the logo. Nothing is broken, I've sent the link from the test environment.",
+        "E4": "Great, the logo will be perfect for them this way, I've shown it to them. It can go live."
+      },
+      "executive_summary_md": "Attention Flag A — Unresolved (1):\n- Clarify \"Add to Cart\" button modifications: confirm whether the client wants a different color (instead of current green) or a size/bold change. Priority: medium; affects homepage design. Action: Ask client to specify color vs size/bold and approve the mockup. Evidence: [E1]\n\nAttention Flag B — Unresolved/Unknown:\n- None"
+    },
+    {
+      "thread_id": "email3",
+      "source_files": [
+        "email3.txt"
+      ],
+      "time_range": {
+        "start": "2025-06-30T10:00:00+02:00",
+        "end": "2026-01-03T15:26:29.711958+00:00"
+      },
+      "attention_flags": {
+        "A_unresolved_action_items": [
+          {
+            "type": "action_item",
+            "subject": "RE: Project Phoenix - New Login Page Specification",
+            "opened_at": "2026-01-03T15:26:29.711958+00:00",
+            "title": "Profile Picture Bug Status Inquiry",
+            "priority": "medium",
+            "flag": "A_unresolved_action_item",
+            "status": "unresolved",
+            "resolved_later": false,
+            "rationale_flag_level": "This is an unresolved action item as Anna is seeking confirmation on the status of a specific bug related to the profile picture, which is important for project progress.",
+            "rationale_status": "The thread does not provide any confirmation that the profile picture bug has been fixed or resolved. The last messages indicate that the issue is still being discussed without any resolution or verification of a fix.",
+            "evidence_ids": [
+              "E1",
+              "E2"
+            ],
+            "evidence_quotes": [
+              "Gábor is looking into the profile picture bug, right?",
+              "Péter asked today about the status of JIRA-112, and this is it."
+            ],
+            "resolution_evidence_ids": [],
+            "resolution_quotes": []
+          }
+        ],
+        "B_emerging_risks_blockers": []
+      },
+      "all_issues": [
+        {
+          "type": "action_item",
+          "subject": "RE: Project Phoenix - New Login Page Specification",
+          "opened_at": "2026-01-03T15:26:29.711958+00:00",
+          "title": "Profile Picture Bug Status Inquiry",
+          "priority": "medium",
+          "flag": "A_unresolved_action_item",
+          "status": "unresolved",
+          "resolved_later": false,
+          "rationale_flag_level": "This is an unresolved action item as Anna is seeking confirmation on the status of a specific bug related to the profile picture, which is important for project progress.",
+          "rationale_status": "The thread does not provide any confirmation that the profile picture bug has been fixed or resolved. The last messages indicate that the issue is still being discussed without any resolution or verification of a fix.",
+          "evidence_ids": [
+            "E1",
+            "E2"
+          ],
+          "evidence_quotes": [
+            "Gábor is looking into the profile picture bug, right?",
+            "Péter asked today about the status of JIRA-112, and this is it."
+          ],
+          "resolution_evidence_ids": [],
+          "resolution_quotes": []
+        }
+      ],
+      "evidence": {
+        "E1": "Gábor is looking into the profile picture bug, right?",
+        "E2": "Péter asked today about the status of JIRA-112, and this is it."
+      },
+      "executive_summary_md": "Attention Flag A — Unresolved\n- Profile picture bug (JIRA-112) remains unresolved; thread asks if Gábor is handling it and flags Péter’s inquiry [E1][E2]. Action: obtain confirmation from Gábor/assignee that a fix is implemented, provide verification steps or rollback plan, and update JIRA-112 status and ETA.\n\nAttention Flag B — None\n- No unresolved or unknown items in Flag B."
+    },
+    {
+      "thread_id": "email1",
+      "source_files": [
+        "email1.txt"
+      ],
+      "time_range": {
+        "start": "2025-06-02T10:00:00+02:00",
+        "end": "2026-01-03T15:26:29.699984+00:00"
+      },
+      "attention_flags": {
+        "A_unresolved_action_items": [],
+        "B_emerging_risks_blockers": []
+      },
+      "all_issues": [],
+      "evidence": {},
+      "executive_summary_md": "Attention Flag A:\n- No unresolved or unknown items.\n\nAttention Flag B:\n- No unresolved or unknown items.\n\nNo evidence entries were provided; no actions required at this time."
+    },
+    {
+      "thread_id": "email12",
+      "source_files": [
+        "email12.txt"
+      ],
+      "time_range": {
+        "start": "2025-06-19T15:10:00+00:00",
+        "end": "2025-06-20T09:41:00+00:00"
+      },
+      "attention_flags": {
+        "A_unresolved_action_items": [],
+        "B_emerging_risks_blockers": []
+      },
+      "all_issues": [],
+      "evidence": {},
+      "executive_summary_md": "Portfolio Health Summary\n\nAttention Flag A:\n- No unresolved or unknown items reported.\n\nAttention Flag B:\n- No unresolved or unknown items reported.\n\nAction: No immediate actions required based on provided data. If you expected items, confirm evidence feed or payload completeness."
+    },
+    {
+      "thread_id": "email15",
+      "source_files": [
+        "email15.txt"
+      ],
+      "time_range": {
+        "start": "2025-06-09T11:00:00+00:00",
+        "end": "2026-01-03T15:26:29.704975+00:00"
+      },
+      "attention_flags": {
+        "A_unresolved_action_items": [],
+        "B_emerging_risks_blockers": []
+      },
+      "all_issues": [],
+      "evidence": {},
+      "executive_summary_md": "Attention Flag A:\n- No unresolved or unknown items to report; no actions required.\n\nAttention Flag B:\n- No unresolved or unknown items to report; no actions required."
+    },
+    {
+      "thread_id": "email16",
+      "source_files": [
+        "email16.txt"
+      ],
+      "time_range": {
+        "start": "2025-06-16T16:45:00+00:00",
+        "end": "2026-01-03T15:26:29.705969+00:00"
+      },
+      "attention_flags": {
+        "A_unresolved_action_items": [],
+        "B_emerging_risks_blockers": []
+      },
+      "all_issues": [],
+      "evidence": {},
+      "executive_summary_md": "Portfolio Health Summary\n\nAttention Flag A:\n- No unresolved or unknown items present in the provided data; no evidence entries supplied to reference.\n\nAttention Flag B:\n- No unresolved or unknown items present in the provided data; no evidence entries supplied to reference.\n\nAction: Confirm if any unresolved/unknown items exist outside this payload and provide corresponding evidence IDs for tracking."
+    },
+    {
+      "thread_id": "email17",
+      "source_files": [
+        "email17.txt"
+      ],
+      "time_range": {
+        "start": "2025-06-25T11:20:00+00:00",
+        "end": "2026-01-03T15:26:29.706960+00:00"
+      },
+      "attention_flags": {
+        "A_unresolved_action_items": [],
+        "B_emerging_risks_blockers": []
+      },
+      "all_issues": [],
+      "evidence": {},
+      "executive_summary_md": "Attention Flag A:\n- No unresolved or unknown items found; no evidence provided.\n\nAttention Flag B:\n- No unresolved or unknown items found; no evidence provided.\n\nAction: If you intended to report unresolved/unknown items, resubmit the payload including those items and their evidence IDs so I can produce the grouped, evidence-referenced summary."
+    },
+    {
+      "thread_id": "email18",
+      "source_files": [
+        "email18.txt"
+      ],
+      "time_range": {
+        "start": "2025-06-28T10:00:00+00:00",
+        "end": "2026-01-03T15:26:29.709962+00:00"
+      },
+      "attention_flags": {
+        "A_unresolved_action_items": [],
+        "B_emerging_risks_blockers": []
+      },
+      "all_issues": [],
+      "evidence": {},
+      "executive_summary_md": "Attention Flag A:\n- No unresolved or unknown items. No evidence provided.\n\nAttention Flag B:\n- No unresolved or unknown items. No evidence provided.\n\nAction: No action required."
+    },
+    {
+      "thread_id": "email4",
+      "source_files": [
+        "email4.txt"
+      ],
+      "time_range": {
+        "start": "2025-06-09T14:00:00+02:00",
+        "end": "2026-01-03T15:26:29.713962+00:00"
+      },
+      "attention_flags": {
+        "A_unresolved_action_items": [],
+        "B_emerging_risks_blockers": []
+      },
+      "all_issues": [],
+      "evidence": {},
+      "executive_summary_md": "Attention Flag A:\n- No unresolved or unknown items (no evidence provided).\n\nAttention Flag B:\n- No unresolved or unknown items (no evidence provided)."
+    },
+    {
+      "thread_id": "email5",
+      "source_files": [
+        "email5.txt"
+      ],
+      "time_range": {
+        "start": "2025-05-30T09:30:00+02:00",
+        "end": "2026-01-03T15:26:29.714969+00:00"
+      },
+      "attention_flags": {
+        "A_unresolved_action_items": [],
+        "B_emerging_risks_blockers": []
+      },
+      "all_issues": [],
+      "evidence": {},
+      "executive_summary_md": "Attention Flag A:\n- No unresolved or unknown items — no action required.\n\nAttention Flag B:\n- No unresolved or unknown items — no action required."
+    },
+    {
+      "thread_id": "email9",
+      "source_files": [
+        "email9.txt"
+      ],
+      "time_range": {
+        "start": "2025-06-30T09:01:00+00:00",
+        "end": "2025-06-30T09:25:00+00:00"
+      },
+      "attention_flags": {
+        "A_unresolved_action_items": [],
+        "B_emerging_risks_blockers": []
+      },
+      "all_issues": [],
+      "evidence": {},
+      "executive_summary_md": "Attention Flag A:\n- No unresolved or unknown items present; no evidence supplied.\n\nAttention Flag B:\n- No unresolved or unknown items present; no evidence supplied.\n\nAction: No immediate follow-up required. If you need a health summary, provide unresolved/unknown items with their evidence IDs (e.g., [E1], [E2])."
+    }
+  ],
+  "models": {
+    "draft": "gpt-4o-mini",
+    "resolve": "gpt-4o-mini",
+    "summary": "gpt-5-mini"
+  }
+}
