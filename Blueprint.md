@@ -56,6 +56,17 @@ flowchart LR
 
 ## 2. The Analytical Engine (Multi-Step AI Logic)
 
+```mermaid
+flowchart LR
+  A["Parse email*.txt into messages"] --> B["Build full thread_text with [MSG 1..N]"]
+  B --> C["Step 1: Draft issues (AI)- deduplicate- classify A/B- evidence quotes + rationale"]
+  C --> D["Step 2: Resolution adjudication (AI)- resolved/unresolved/unknown- resolution proof quotes"]
+  D --> E["Deterministic guardrails- quotes must exist- resolution must be later"]
+  E --> F["Attention Flags output- keep only unresolved/unknown"]
+  F --> G["Step 3: Executive summary (AI)- short, actionable- references evidence IDs"]
+  G --> H["Artifacts: report.json + report.md"]
+  ```
+
 ### Step 1 — Issue drafting (AI: `ANALYZE_MODEL`, default `gpt-4o-mini`)
 
 - **Input:** full thread (`thread_text`)
@@ -110,16 +121,6 @@ All model choices are configurable by environment variables:
 
 This allows cost/performance tuning without code changes.
 
-```mermaid
-flowchart LR
-  A["Parse email*.txt into messages"] --> B["Build full thread_text with [MSG 1..N]"]
-  B --> C["Step 1: Draft issues (AI)- deduplicate- classify A/B- evidence quotes + rationale"]
-  C --> D["Step 2: Resolution adjudication (AI)- resolved/unresolved/unknown- resolution proof quotes"]
-  D --> E["Deterministic guardrails- quotes must exist- resolution must be later"]
-  E --> F["Attention Flags output- keep only unresolved/unknown"]
-  F --> G["Step 3: Executive summary (AI)- short, actionable- references evidence IDs"]
-  G --> H["Artifacts: report.json + report.md"]
-  ```
 ### Engineered prompts used in the code (full text + intent)
 
 This PoC uses **three prompt pairs** (System + User) aligned to the three AI steps:
@@ -235,3 +236,22 @@ PAYLOAD_JSON:
 - Prevents scope creep by only summarizing items already selected by the engine.
 - Evidence IDs make the summary traceable back to exact quotes in the report.
 
+## 3. Cost & Robustness Considerations
+
+### 3.1 Robustness (resilience to misleading / ambiguous information)
+
+- **Evidence-grounded extraction:** every issue must include **1–3 verbatim quotes** from the thread (`evidence_quotes`). If a quote is not found verbatim in `thread_text`, the item is discarded (**hard guardrail**).
+- **Structured outputs (fixed schema):** all AI steps use LangChain `with_structured_output(...)` with Pydantic schemas, reducing misinformation / “creative” responses and making validation deterministic.
+- **Separate “resolution adjudication” step:** resolution is decided in an isolated step that must output `status ∈ {resolved, unresolved, unknown}` and, if categorized as **resolved**, the system requires **explicit resolution quotes**, pushing the model away from guessing.
+- **Chronology enforcement:** if the model claims `resolved`, the code enforces that resolution quotes appear **later** than the problem evidence; otherwise it is downgraded to `unknown`.
+- **Uncertainty is a feature:** ambiguous cases are intentionally labeled `unknown` so they can be surfaced for human clarification instead of being hallucinated into “resolved/unresolved”.
+
+### 3.2 Cost management (AI usage strategy)
+
+- **Model routing / cascading:** use a cheap, fast model for high-volume steps (**draft + resolve**) and reserve the stronger (more expensive) model only for the final **executive summary**.
+- **Token minimization:**
+  - analyze at **thread-level once** (deduplicated), not per-message;
+  - generate the summary only from **unresolved/unknown** items, not the full thread;
+  - keep quotes short (1–3, ~1 line each).
+- **Caching + reuse where possible:** for repeated runs on the same emails, cache per-thread results keyed by a content hash (reduces repeated LLM calls; may benefit from cached-input pricing where supported).
+- **Configurable cost controls:** models are set via env vars (`OPENAI_ANALYZE_MODEL`, `OPENAI_RESOLVE_MODEL`, `OPENAI_SUMMARY_MODEL`) so we can tune cost/performance without code changes and align with current pricing.
