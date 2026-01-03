@@ -1,6 +1,6 @@
 ## Introduction
 
-This interview project designs an automated AI Agent system and delivers a lightweight PoC and documentation to support the creation of Quarterly Business Reviews from project email communication. The primary goal is to detect and surface attention-worthy issues, especially problems, risks, and hidden bottlenecks across long, multi-thread email chains.
+This project designs an automated AI Agent system and delivers a lightweight PoC and documentation to support the creation of Quarterly Business Reviews from project email communication. The primary goal is to detect and surface attention-worthy issues, especially problems, risks, and hidden bottlenecks across long, multi-thread email chains.
 
 ## 1. Data Ingestion & Initial Processing
 
@@ -287,3 +287,19 @@ PAYLOAD_JSON:
 - **Tokens and cost per thread / per run:** input/output tokens by step (draft/resolve/summary), plus monthly cost trend.
 - **Cache hit rate:** % of threads served from cached results (when re-running on unchanged data).
 - **Cost per “useful item”:** cost divided by number of unresolved/unknown items surfaced (helps justify spend).
+
+## 5. Architectural Risk & Mitigation
+
+### Biggest architectural risk: **Prompt injection / untrusted input influencing the LLM**
+Even in this simplified system, the LLM is processing **untrusted text** (email bodies). A malicious or misleading message can “instruct” the model to ignore rules, hide issues, or mislabel resolution. 
+This is especially risky because leadership-facing outputs can be materially impacted by a single manipulated thread.
+
+### Mitigation strategy
+- **Treat the LLM as an untrusted component:** never allow model output to directly trigger actions; outputs must remain “recommendations” backed by evidence.
+- **Hard grounding requirements (already implemented):**
+  - every issue must include **verbatim evidence quotes**;
+  - “resolved” requires **verbatim resolution quotes**;
+  - deterministic checks enforce quotes exist and resolution appears **later** than the problem evidence.
+- **Instruction/data separation:** make the prompt explicit that the *thread is data, not instructions*, and refuse to follow any instructions found in emails. 
+- **Least-privilege runtime:** keep the analyzer isolated (no access to secrets, no external tools, no write actions beyond report generation), so even a successful injection has minimal blast radius.
+- **Sensitive-data controls:** apply redaction/DLP before model calls and use vendor settings that avoid training on business inputs by default; this reduces the impact of accidental leakage in prompts/outputs. 
