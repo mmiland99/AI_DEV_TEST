@@ -52,7 +52,7 @@ flowchart LR
   F --> G[Analysis engine]
   G --> H[QBR outputs and flags]
   I[(Roster Colleagues)] --> D
-
+```
 
 ## 2. The Analytical Engine (Multi-Step AI Logic)
 
