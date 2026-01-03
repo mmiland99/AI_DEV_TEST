@@ -53,33 +53,60 @@ flowchart LR
   G --> H[QBR outputs and flags]
   I[(Roster Colleagues)] --> D
 
+
 ## 2. The Analytical Engine (Multi-Step AI Logic)
 
-This component turns raw email threads into a QBR-ready “what needs attention” view. It is designed to be **thread-aware** (reads the full conversation), **deduplicated** (no repeated issues), and **grounded** (every claim must be supported by word-for-word quotes).
+### Step 1 — Issue drafting (AI: `ANALYZE_MODEL`, default `gpt-4o-mini`)
 
-### 2.1 Attention Flags (Director-grade signals)
+- **Input:** full thread (`thread_text`)
+- **Output (structured):** a **deduplicated** list of issues (Flag A or Flag B), each with:
+  - `severity_or_priority` (`low` / `medium` / `high`)
+  - `evidence_quotes` (1–3 **verbatim** quotes)
+  - short rationale (“why A/B and why level”)
+- **Why this model:** this is a **high-volume extraction** task, so we use a cost-efficient model with deterministic settings (`temperature=0`).
+- **Why structured outputs:** we use Pydantic schemas via `with_structured_output(...)` so the model must return predictable JSON (reduces parsing errors and “creative” answers).
 
-**Attention Flag A — Unresolved Action Items**
-- **What it is:** Explicit asks / questions / tasks / decisions that remain **open** by the end of the thread.
-- **Why it matters:** Open asks often translate into delivery risk (blocked decisions, unclear ownership, stalled progress).
+---
 
-**Attention Flag B — Emerging Risks / Blockers**
-- **What it is:** Delivery threats (incidents, blockers, scope/timeline risk, resourcing gaps) that are **unresolved or uncertain** by thread end.
-- **Why it matters:** Directors need early awareness of risks that can impact customers, timeline, or cost.
+### Step 2 — Resolution adjudication (AI: `RESOLVE_MODEL`, default `gpt-4o-mini`)
 
-> Note: The final report intentionally surfaces only items with `status in {unresolved, unknown}`.
-> Resolved items are kept in `all_issues` for auditability, but do not distract the QBR “attention” view.
+For **each drafted issue**:
 
-### 2.2 Multi-step detection logic (high-level)
+- **Input:** full thread + the issue JSON + optional heuristic “resolution snippets”
+- **Output (structured):** `status ∈ {resolved, unresolved, unknown}` plus:
+  - `resolution_quotes` (1–3 **verbatim** quotes proving resolution)
+  - short rationale (“why resolved/unresolved/unknown”)
+- **Why a second model call?**  
+  Deciding “resolved later” is a **separate reasoning task** that benefits from being isolated and forced to produce **explicit proof** (quotes). This reduces false “still open” cases (e.g., when the fix is confirmed only at the end).
 
-We use a **multi-step AI pipeline** because “detect issue” and “decide resolved later” are different reasoning tasks. Splitting them improves reliability and reduces hallucinations.
+---
 
-```mermaid
-flowchart LR
-  A[Parse email*.txt into messages] --> B[Build full thread_text with [MSG 1..N]]
-  B --> C[Step 1: Draft issues (AI)\n- deduplicate\n- classify A/B\n- evidence quotes + rationale]
-  C --> D[Step 2: Resolution adjudication (AI)\n- resolved/unresolved/unknown\n- resolution proof quotes]
-  D --> E[Deterministic guardrails\n- quotes must exist\n- resolution must be later]
-  E --> F[Attention Flags output\n- keep only unresolved/unknown]
-  F --> G[Step 3: Executive summary (AI)\n- short, actionable\n- references evidence IDs]
-  G --> H[Artifacts: report.json + report.md]
+### Step 2b — Guardrails (deterministic checks, anti-hallucination)
+
+We enforce rules **outside** the LLM:
+
+- **Quote existence check:** both evidence and resolution quotes must be exact substrings of `thread_text`.
+- **Chronology check:** resolution quotes must appear in a later `[MSG k]` than the problem evidence.
+- If the model claims `resolved` but fails these checks → downgrade to `unknown`.
+
+---
+
+### Step 3 — Executive summary (AI: `SUMMARY_MODEL`, default `gpt-5-mini`)
+
+- **Input:** only `unresolved` / `unknown` items + an evidence map `{E# → quote}`
+- **Output:** a short Director-friendly markdown summary grouped by Flag A vs Flag B, referencing evidence IDs like `[E3]`.
+- **Why a stronger summary model?**  
+  Summaries are what leadership reads; we prefer higher output quality here while keeping extraction/adjudication cost-efficient.
+
+---
+
+### Model routing and cost control
+
+All model choices are configurable by environment variables:
+
+- `OPENAI_ANALYZE_MODEL` (default: `gpt-4o-mini`)
+- `OPENAI_RESOLVE_MODEL` (default: `gpt-4o-mini`)
+- `OPENAI_SUMMARY_MODEL` (default: `gpt-5-mini`)
+
+This allows cost/performance tuning without code changes.
+
