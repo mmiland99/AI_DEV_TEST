@@ -113,12 +113,125 @@ This allows cost/performance tuning without code changes.
 ```mermaid
 flowchart LR
   A["Parse email*.txt into messages"] --> B["Build full thread_text with [MSG 1..N]"]
-  B --> C["Step 1: Draft issues (AI)\n- deduplicate\n- classify A/B\n- evidence quotes + rationale"]
-  C --> D["Step 2: Resolution adjudication (AI)\n- resolved/unresolved/unknown\n- resolution proof quotes"]
-  D --> E["Deterministic guardrails\n- quotes must exist\n- resolution must be later"]
-  E --> F["Attention Flags output\n- keep only unresolved/unknown"]
-  F --> G["Step 3: Executive summary (AI)\n- short, actionable\n- references evidence IDs"]
+  B --> C["Step 1: Draft issues (AI)- deduplicate- classify A/B- evidence quotes + rationale"]
+  C --> D["Step 2: Resolution adjudication (AI)- resolved/unresolved/unknown- resolution proof quotes"]
+  D --> E["Deterministic guardrails- quotes must exist- resolution must be later"]
+  E --> F["Attention Flags output- keep only unresolved/unknown"]
+  F --> G["Step 3: Executive summary (AI)- short, actionable- references evidence IDs"]
   G --> H["Artifacts: report.json + report.md"]
   ```
+### Engineered prompts used in the code (full text + intent)
 
+This PoC uses **three prompt pairs** (System + User) aligned to the three AI steps:
+- **Draft** (extract + deduplicate + classify issues)
+- **Resolve** (decide if each issue was resolved later in the thread, with proof)
+- **Summarize** (Director-ready output, grounded in evidence IDs)
+
+Each step is separated to keep the model’s job narrow and measurable, and to enforce *grounding* via verbatim quotes.
+
+---
+
+#### 1) Issue drafting prompts (`THREAD_SYSTEM` + `THREAD_USER`)
+
+**Goal:** From the full email thread, produce a **deduplicated** list of issues, labeled as Flag A or Flag B, each backed by **verbatim evidence quotes**.
+
+```text
+THREAD_SYSTEM:
+You are a Director-level QBR analyst for project delivery email threads.
+Return ONLY issues supported by verbatim quotes from the provided thread.
+IMPORTANT: NO duplicates — merge repeated mentions of the same incident into ONE issue.
+Do not guess.
+
+THREAD_USER:
+Analyze the full email thread and return a deduplicated list of issues.
+
+Definitions:
+- Attention Flag A_unresolved_action_item: explicit asks/questions/tasks/decisions needed.
+- Attention Flag B_emerging_risk_blocker: blockers/incidents/risks (prod issues, outages, scope/timeline risks, etc.).
+
+Rules (strict):
+1) NO duplicates: merge repeated mentions of the same incident/task into one issue.
+2) severity_or_priority: low|medium|high (use high only for explicit cues like URGENT, panic, prod/live impact, "all hands").
+3) evidence_quotes: 1-3 short verbatim quotes that demonstrate the PROBLEM / ASK.
+4) rationale_flag_level: 1-2 sentences explaining why it’s A or B and why the level.
+
+THREAD (verbatim):
+{thread_text}
+```
+
+**Design notes (why it works):**
+- “NO duplicates” forces thread-level merging, not message-by-message extraction.
+- Evidence quotes are required, so output stays grounded in the source.
+
+---
+
+#### 2) Resolution adjudication prompts (`RESOLVE_SYSTEM` + `RESOLVE_USER`)
+
+**Goal:** For each drafted issue, decide if it was resolved later by the end of the thread, even if the word “resolved” is not used. If resolved, require **verbatim resolution proof quotes**.
+
+```text
+RESOLVE_SYSTEM:
+You are a strict resolution adjudicator.
+Your job is to decide if the issue is RESOLVED later in the thread.
+Use contextual proof (e.g., 'fix is out', 'tested', 'working again').
+Do not guess: if there is no clear proof, set status='unknown' or 'unresolved'.
+
+RESOLVE_USER:
+Decide whether the issue is resolved by the END of the thread.
+
+Inputs:
+- THREAD (verbatim)
+- ISSUE (title + flag + level + problem evidence quotes)
+- OPTIONAL: candidate_resolution_snippets (machine-selected snippets that may indicate resolution)
+
+Rules (strict):
+1) status must be one of: resolved|unresolved|unknown.
+2) If status=resolved, you MUST provide 1-3 resolution_quotes copied verbatim from the thread that show:
+   - a fix was applied/deployed OR completion happened AND
+   - confirmation/verification (e.g., tested, working again) when available.
+3) resolution_quotes should come from later messages than the problem evidence (chronologically).
+4) rationale_status: 1-2 sentences explaining why you chose the status.
+
+THREAD:
+{thread_text}
+
+ISSUE_JSON:
+{issue_json}
+
+CANDIDATE_RESOLUTION_SNIPPETS (may be empty):
+{candidate_snippets}
+```
+
+**Design notes (why it works):**
+- Requires explicit proof (`resolution_quotes`), which reduces “guessing”.
+- The code further enforces chronology outside the LLM (resolution proof must appear in a later `[MSG k]`).
+
+---
+
+#### 3) Executive summary prompts (`SUMMARY_SYSTEM` + `SUMMARY_USER`)
+
+**Goal:** Generate a short Director-friendly summary using only unresolved/unknown items, referencing evidence IDs for auditability.
+
+```text
+SUMMARY_SYSTEM:
+You write concise executive summaries for Directors.
+Use only the provided unresolved/unknown items.
+Do not invent facts.
+
+SUMMARY_USER:
+Create a Portfolio Health summary.
+
+Rules:
+- Group by Attention Flag A and B.
+- Include only items with status='unresolved' and 'unknown' (unknown -> needs clarification).
+- Each bullet MUST reference evidence IDs like [E1], [E2] (can be multiple).
+- Keep it short and actionable.
+
+PAYLOAD_JSON:
+{payload_json}
+```
+
+**Design notes (why it works):**
+- Prevents scope creep by only summarizing items already selected by the engine.
+- Evidence IDs make the summary traceable back to exact quotes in the report.
 
