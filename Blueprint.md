@@ -1,6 +1,6 @@
 ## Introduction
 
-This project designs an automated AI Agent system and delivers a lightweight PoC and documentation to support the creation of Quarterly Business Reviews from project email communication. The primary goal is to detect and surface attention-worthy issues, especially problems, risks, and hidden bottlenecks across long, multi-thread email chains.
+This project designs an automated AI Agent system and delivers a lightweight PoC and documentation to support the creation of Quarterly Business Reviews from project email communication. The goal is to detect and surface attention-worthy issues, especially problems, risks, and hidden bottlenecks across long, multi-thread email chains.
 
 ## 1. Data Ingestion & Initial Processing
 
@@ -54,7 +54,7 @@ flowchart LR
   I[(Roster Colleagues)] --> D
 ```
 
-## 2. The Analytical Engine (Multi-Step AI Logic)
+## 2. The Analytical Engine
 
 ```mermaid
 flowchart LR
@@ -168,7 +168,7 @@ THREAD (verbatim):
 
 #### 2) Resolution adjudication prompts (`RESOLVE_SYSTEM` + `RESOLVE_USER`)
 
-**Goal:** For each drafted issue, decide if it was resolved later by the end of the thread, even if the word “resolved” is not used. If resolved, require **verbatim resolution proof quotes**.
+**Goal:** For each drafted issue, decide if it was resolved later by the end of the thread. If resolved, require **verbatim resolution proof quotes**.
 
 ```text
 RESOLVE_SYSTEM:

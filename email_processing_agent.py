@@ -286,7 +286,7 @@ def resolution_quotes_are_later(msg_chunks: List[str], evidence_quotes: List[str
             return False
     return True
 
-# Candidate resolution snippet harvesting (helps the AI) 
+# Candidate resolution snippet harvesting
 RESOLUTION_PATTERNS = [
     r"\bfix\b", r"\bfixed\b", r"\bpushed\b", r"\bdeployed\b", r"\brolled back\b",
     r"\bworking again\b", r"\bworks again\b", r"\bworking now\b", r"\bworks now\b",
@@ -335,7 +335,7 @@ def build_report(input_dir: str, redact: bool) -> Dict[str, Any]:
             thread_text = redact_emails_in_text(thread_text)
             msg_chunks = [redact_emails_in_text(c) for c in msg_chunks]
 
-        # Step 1) Draft issues from full thread
+        # Step 1: Draft issues from full thread
         draft: ThreadIssuesDraft = draft_chain.invoke({"thread_text": thread_text})
 
         drafts: List[IssueDraft] = []
